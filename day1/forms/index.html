@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello, World!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h3>Login form</h3>
+
+        <form action="/submit">
+            <div>
+                <label for="username">Username : </label>
+                <input type="text" id="username" name="user" placeholder = "Enter username" required>
+                <h4 id = "ualert"></h4>
+            </div>
+            <div>
+                <label for="password">Password : </label>
+                <input type="password" id="password" name="pass" placeholder="Enter password" required>
+                <h4 id = "palert"></h4>
+            </div>
+            <div>
+                <input type="checkbox" id="terms" checked value="terms" name="terms">
+                <label for="terms">Agree to our terms and conditions</label>
+                <h4 id = "talert"></h4>
+            </div>
+
+            <button>Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+    
+    <div class="table-container">
+        <table border="2">
+            <thead>
+                <tr>
+                    <th id="id">id</th>
+                    <th id="username">Username</th>
+                    <th id="password">Password</th>
+                    <th id="terms">Terms</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- js script will add rows here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
