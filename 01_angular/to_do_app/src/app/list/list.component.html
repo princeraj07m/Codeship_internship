@@ -1,15 +1,22 @@
 <div class = "header">
     <h1>TO DO APP</h1>
 </div>
+
 @for(task of tasks ; track  task){
-<div class="list">
-    <h3>LIST</h3>
-    <h4>Priority : Low</h4>
-    <p>Task content here</p>
-    <input type="checkbox"  id="Done">
-    <button><label for="Done"> DONE</label></button>
+<div class="list" >
+    <h3>{{task.taskh}}</h3>
+    <p>{{task.content}}</p>
+    <button (click)="done()" >DONE</button>
 </div>
 }
-<div>
-    <button (click) = "addtask()" class="btn">Add New Task</button>
+<div id="input-new-task">
+    @if(input){
+    <input type="text" id="tittle" (input)="updateName($event)" >
+    <input type="text" id="content" (input)="updateContent($event)">
+    <button (click) = "input = false " (click) = "addnote()"  >ADD</button>
+}
 </div>
+<div>
+    <button (click) = " input = true" class="btn">Add New Task</button>
+</div>
+
