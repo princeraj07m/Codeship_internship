@@ -27,11 +27,11 @@ export class HeroComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     new Swiper('.mySwiper', {
-      slidesPerView: 5,
+      slidesPerView: 6,
       spaceBetween: 30,
       loop: true,
       autoplay: {
-        delay: 2500,
+        delay: 800,
         disableOnInteraction: false,
       },
       navigation: {

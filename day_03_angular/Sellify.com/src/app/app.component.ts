@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { WhyUsComponent } from './why-us/why-us.component';
 import { HowWeWorkComponent } from './how-we-work/how-we-work.component';
 import { HeroComponent } from './hero/hero.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ WhyUsComponent , HowWeWorkComponent, HeroComponent],
+  imports: [ WhyUsComponent , HowWeWorkComponent, HeroComponent, FeedbackComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
