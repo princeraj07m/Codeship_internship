@@ -1,0 +1,76 @@
+<section class="header-holder">
+    <div class="container">
+<!-- 
+        <div class="cardContainer gap-5">
+
+            
+                <div class="card mb-3 d-flex justify-content-space-around shadow p-3 mb-5 bg-body-tertiary rounded" style="max-width: 540px;">
+                    <div class="row g-0 d-flex justify-content-center">
+                        <div class="col-md-4">
+                        <img src="https://gaddzy.in/image/categoryMobile.png" class="img-fluid rounded-start " alt="...">
+                        </div>
+                        <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title text-black">Mobile Phone</h2>
+                            <p class="card-text">Sell Now &#8594;</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3 d-flex justify-content-space-around shadow p-3 mb-5 bg-body-tertiary rounded" style="max-width: 540px;">
+                    <div class="row g-0 d-flex justify-content-center">
+                        <div class="col-md-4">
+                        <img width="100px" src="https://gaddzy.in/image/tablet.png" class="img-fluid rounded-start mt-3" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title text-black">Tablet</h2>
+                            <p class="card-text">Sell Now &#8594;</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="card mb-3 shadow p-3 mb-5 bg-body-tertiary rounded" style="max-width: 540px;">
+                    <div class="row g-0 d-flex justify-content-center">
+                        <div class="col-md-4">
+                        <img width="100px" src="https://gaddzy.in/image/smartwatch.png" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title text-black">Smart Phone</h2>
+                            <p class="card-text">Sell Now &#8594;</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        </div> -->
+
+        <div class="mt-3">
+            <h1>Best Sellers</h1>
+
+
+            <div class="swiper mySwiper d-flex">
+                <div class="swiper-wrapper d-flex">
+                    <div
+                    class="swiper-slide text-center "
+                    *ngFor="let product of products"
+                    >
+                    <img style="width: 120px;" [src]="product.image" class=" w-50 img-fluid mb-2" />
+                    <p>{{ product.title }}</p>
+                    </div>
+                </div>
+
+                <!-- Swiper Buttons -->
+                <div class="swiper-button-prev bg-black"></div>
+                <div class="swiper-button-next bg-black"></div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
