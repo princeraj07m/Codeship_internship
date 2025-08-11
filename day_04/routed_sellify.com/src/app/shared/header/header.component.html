@@ -1,1 +1,26 @@
-<p>header works!</p>
+<section class="headerSection container-fluid">
+  <div class="container">
+    <div class="headerItems d-flex">
+      <div class="logo col-6">
+        <img class="logo-img" src="https://gaddzy.in/image/logo.png" alt="LOGO" />
+      </div>
+
+      <div class="nav-btn col-6">
+        <ul class="d-flex gap-4 m-0">
+          @for(btn of btns; track btn) {
+          <li>
+            <a href="/{{btn.value}}">
+            <p class="nav-link">{{ btn.name }}</p>
+            </a>
+          </li>
+          }
+        </ul>
+      </div>
+      <!-- Hamburger Icon -->
+      <div class="hamburger d-flex align-content-center" (click)="toggleMenu()">
+            &#9776;
+      </div>    
+    </div>
+    <div class="empty-header row"></div>
+  </div>
+</section>

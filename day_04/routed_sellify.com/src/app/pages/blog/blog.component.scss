@@ -1,0 +1,105 @@
+.container-fluid{
+  background-color: #690087;
+  color: white;
+}
+
+img{
+  width: 75%;
+  border-radius: 10%;
+}
+
+  h3.text-decoration-underline {
+    color: #ffd700;
+    font-weight: bold;
+  }
+
+
+  h5.text-light {
+    color: #e0b3ff !important;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.8;
+  }
+
+
+  p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+
+  .btn-light:hover {
+    background-color: #ff69b4;
+    color: white;
+    border-color: #ff69b4;
+    transition: 0.3s;
+  }
+
+
+  img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #ffd700;
+  }
+.size{
+  width: 50%;
+}
+
+
+.second-div {
+  padding: 60px 20px;
+  background-color: #f8f9fa; /* Bootstrap's bg-light */
+}
+
+.second-div .row {
+  align-items: center;
+}
+
+.second-div img.size {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.second-div h3 {
+  color: #6f42c1; 
+  font-weight: bold;
+}
+
+.second-div h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.second-div p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.second-div .btn {
+  background-color: #6f42c1;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.second-div .btn:hover {
+  background-color: #5a32a3;
+}
+
+
+.third-div{
+  height: 500px;
+  background-color: #ff69b4;
+  div{
+    padding: 50px;
+    background-color: #e0b3ff;
+    border-radius: 10%;
+  }
+}

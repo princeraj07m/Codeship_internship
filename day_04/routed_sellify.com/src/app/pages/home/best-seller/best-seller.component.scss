@@ -1,0 +1,46 @@
+.card {
+  width: 400px;
+  height: 150px;
+  display: flex;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.card-body {
+  color: #690087;
+}
+
+.swiper {
+  width: 100%;
+  padding: 20px 0;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  font-size: xx-large;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 1%;
+  height: 4rem;
+  width: 4rem;
+  background-color: #ffffff;
+}
+.ali {
+  align-items: center;
+}

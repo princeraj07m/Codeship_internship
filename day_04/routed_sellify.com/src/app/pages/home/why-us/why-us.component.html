@@ -1,0 +1,45 @@
+
+<div class="mt-5">
+<section class="productSection mb-3">
+  <div class="container">
+    <div class="row gap-3 ">
+        <div class="col p-3 bg-white">
+            <h4>Why Choose Us?</h4>
+            <h2 class="fw-bold">Selling Old Phones made Hassle-Free</h2>
+          
+        </div>
+    @for(feature of features1; track feature) {
+        <div class="col p-3">
+            <div class="d-flex gap-3">
+            <div><img src="{{feature.img}}" alt=""></div>
+            <div>
+                <p class="fw-600">{{feature.p1}}</p>
+           </div>
+           </div>
+          <p>{{feature.p2}}</p>
+        </div>
+    }
+    </div>
+  </div>
+</section>
+
+
+<section class="productSection">
+  <div class="container">
+    <div class="row gap-3">
+        @for(feature of features2; track feature) {
+        <div class="col p-3">
+            <div class="d-flex gap-3">
+            <div><img src="{{feature.img}}" alt=""></div>
+            <div>
+                <p class="fw-600">{{feature.p1}}</p>
+           </div>
+           </div>
+          <p>{{feature.p2}}</p>
+        </div>
+    }
+    </div>
+  </div>
+</section>
+
+</div>

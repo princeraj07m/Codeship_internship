@@ -1,0 +1,31 @@
+.footer {
+  background-color: #690087;
+  margin-top: 50px;
+  padding: 0px;
+  height: fit-content;
+  color: white;
+  text-align: center;
+  justify-content: space-around;
+}
+.row{
+    margin: 0px;
+    padding: 0px;
+    height: fit-content;
+}
+.quick-links {
+  background-color: #690087;
+}
+svg {
+  margin: 2%;  
+  width: 20px;
+  height: 20px;
+}
+
+
+li:hover{
+    transform: translateX(-2px);
+}
+
+@media (max-width: 768px) {
+    
+}

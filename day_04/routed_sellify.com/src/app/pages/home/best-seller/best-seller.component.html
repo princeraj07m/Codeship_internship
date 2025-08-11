@@ -1,0 +1,28 @@
+
+<section class="header-holder mt-2">
+  <div class="container d-flex mt-1 ali">
+    <div class=" swiper-button-prev  z-3 col-1">⇦</div>
+    <div style="overflow: hidden">
+      <div class="mt-3 row">
+        <div class="d-flex">
+          <div class="swiper mySwiper d-flex col-10">
+            <div class="swiper-wrapper d-flex">
+              <div
+                class="swiper-slide text-center"
+                *ngFor="let product of products"
+              >
+                <img
+                  style="width: 120px"
+                  [src]="product.image"
+                  class="w-50 img-fluid mb-2"
+                />
+                <p>{{ product.title }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next z-3 col-1 ">⇨</div>
+  </div>
+</section>
