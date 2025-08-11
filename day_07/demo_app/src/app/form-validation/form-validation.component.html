@@ -1,0 +1,55 @@
+<form class="form" #form = "ngForm">
+    <p class="title" [ngClass]="bg">Register </p>
+    <p class="message">Signup now and get full access to our app. </p>
+        <div class="flex">
+        <label>
+            <input class="input" #fname = "ngModel" name="fname" [(ngModel)] = "data.fname" type="text" placeholder="" required minlength="3">
+              <span>Firstname</span>
+        </label>
+        <label>
+            <input class="input" #lname = "ngModel" name="lname" [(ngModel)] = "data.lname" type="text" placeholder="" required minlength="3">
+            <span>Lastname</span>
+        </label>
+    </div>  
+            
+    <label>
+        <input class="input" #email = "ngModel" name="email"  [(ngModel)] = "data.email" type="email" placeholder="" required="">
+        <span>Email</span>
+    </label> 
+        
+    <label>
+        <input class="input" #pass = "ngModel" name="pass"  [(ngModel)] = "data.pass" type="password" placeholder="" required="">
+        <span>Password</span>
+    </label>
+    <label>
+        <input class="input" #cpass = "ngModel"  name="cpass"  [(ngModel)] = "data.cpass" type="password" placeholder="" required="">
+        <span>Confirm password</span>
+    </label>
+    @if(form.invalid){
+      
+      <button class="submit bg-danger" >Submit</button>
+    }@else{
+      <button class="submit bg-primary " (click) = register()>Submit</button>
+
+    }
+    <p class="signin">Already have an acount ? <a href="#">Signin</a> </p>
+    
+    <!-- Form Validation -->
+    <div>
+      @if(fname.touched && fname.errors?.['required']){
+        <div class="text-danger">* Firstname is required</div>
+      }@else if(fname.touched && fname.errors?.['minlength']){
+        <div class="text-danger">* Firstname must be at least 3 characters</div>
+      }
+      @if(lname.touched && lname.errors?.['required']){
+        <div class="text-danger">* Lastname is required</div>
+      }@else if(lname.touched && lname.errors?.['minlength']){
+        <div class="text-danger">* Lastname must be at least 3 characters</div>
+      }
+      @if( pass.touched && cpass.touched && data.pass != data.cpass){
+        <div class="text-danger">* Pasword mismatch</div>
+      }@else if( pass.touched && cpass.touched && data.pass == data.cpass){
+        <p>All Set 🎯</p>
+      }
+    </div>
+</form>

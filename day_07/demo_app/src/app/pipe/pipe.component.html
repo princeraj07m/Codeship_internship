@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Pipe Demo</h2>
+            <p>Original Text: {{ text }}</p>
+            <p>Uppercase: {{ text | uppercase }}</p>
+            <p>Lowercase: {{ text | lowercase }}</p>
+            <p>Titlecase: {{ text | titlecase }}</p>
+            <p>Slice (0, 5): {{ text | slice:0:5 }}</p>
+            <p>Slice (6): {{ text | slice:6 }}</p>
+
+            <h2>json Pipe Demo</h2>
+            
+            <p> Object  =  {{object}}</p>
+            <p> Object with json pipe =  {{object | json}}</p>
+            
+            <h2>Async pipe</h2>
+            <p>Current time : {{currtime | async | date : 'hh : mm : ss'}}</p>
+            
+            <h2>Custom pipe</h2>
+            <p> Name : {{name | na}}</p>
+            <p> Name with pipe : {{ emptyname | na}}</p>
+
+        </div>
+    </div>
+</div>
+

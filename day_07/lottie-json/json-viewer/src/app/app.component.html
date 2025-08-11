@@ -1,0 +1,11 @@
+<div class="add-on-services-grid">
+  <div class="service-box" *ngFor="let service of services">
+    <div class="lottie-icon">
+      <ng-lottie
+        [options]="{ path: service.path }"
+       >
+      </ng-lottie>
+    </div>
+    <p class="service-label">{{ service.name }}</p>
+  </div>
+</div>

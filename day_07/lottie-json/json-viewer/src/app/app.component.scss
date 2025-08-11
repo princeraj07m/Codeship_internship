@@ -1,0 +1,30 @@
+.add-on-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.service-box {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.lottie-icon {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-label {
+  margin-top: 1rem;
+  font-weight: bold;
+}
