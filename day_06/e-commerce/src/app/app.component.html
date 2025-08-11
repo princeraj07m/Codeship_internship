@@ -1,0 +1,77 @@
+<header class="bg-light py-2 shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center">
+    <!-- Logo / Brand -->
+    <div class="navbar-brand fw-bold fs-4">ShopEasy</div>
+
+    <!-- Search bar -->
+    <form class="flex-grow-1 mx-3" role="search">
+      <input
+        class="form-control form-control-sm"
+        type="search"
+        placeholder="Search products..."
+        aria-label="Search"
+      />
+    </form>
+    <div style="position: relative; cursor: pointer; font-weight: 600" (click) = "showcart()">
+      Cart &nbsp;<sup
+        ><b>{{ cartitemcount }}</b></sup
+      >
+    </div>
+  </div>
+</header>
+
+<section class="pt-lg-5 pb-lg-5 pt-sm-3 pb-sm-3">
+  <div class="container">
+    <!-- home  -->
+    <div class="row gap-4" *ngIf="cart_open == false">
+      <div
+        class="col-lg-2 col-md-3 col-sm-5 shop-item"
+        *ngFor="let item of items"
+      >
+        <div class="d-flex flex-column h-100 justify-content-between mb-3">
+          <div class="">
+            <img [src]="item.img" alt="" />
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.desc }}</p>
+          </div>
+
+          <div
+            class="d-flex align-items-end justify-content-between gap-5 p-1 mb-3"
+          >
+            <h4>{{ item.price }}</h4>
+            <button
+              class="bg-sucess rounded-pill text anim-btn"
+              routerLink="/cart"
+              (click)="addtocart(item)"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- cart  -->
+    <div class="row gap-4" *ngIf="cart_open == true">
+      <div
+        class="col-lg-2 col-md-3 col-sm-5 shop-item"
+        *ngFor="let cartitem of cartitems" 
+      >
+      @if(cartitem.name != ' '){
+        <div class="d-flex flex-column h-100 justify-content-between mb-3 ">
+          <div class="">
+            <img [src]="cartitem.img" alt="" />
+            <h3>{{ cartitem.name }}</h3>
+            <p>{{ cartitem.desc }}</p>
+          </div>
+
+          <div
+            class="d-flex align-items-end justify-content-between gap-5 p-1 mb-3"
+          >
+            <h4>{{ cartitem.price }}</h4>
+          </div>
+        </div>
+      }
+      </div>
+    </div>
+  </div>
+</section>

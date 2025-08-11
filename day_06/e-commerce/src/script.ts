@@ -1,0 +1,1 @@
+let cartitemcount: number= 0;
