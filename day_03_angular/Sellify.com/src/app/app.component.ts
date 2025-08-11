@@ -12,8 +12,10 @@ import { FeedbackComponent } from './feedback/feedback.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  
   title = 'bootstrap_demo';
   btns  = ['Home', 'About Us ', 'Sell your mobile', 'Contact Us', 'Login'];
+  
 
   phones = [
   {
