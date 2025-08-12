@@ -1,24 +1,18 @@
+// app.module.ts
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { LottieComponent, provideLottieOptions } from 'ngx-lottie';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LottieComponent, provideLottieOptions } from 'ngx-lottie';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    LottieComponent
+    LottieComponent  // Import the standalone Lottie component
   ],
   providers: [
     provideLottieOptions({
-      player: () => import('lottie-web'),
-    }),
-  ],
-  bootstrap: [AppComponent]
-})
+      player: () => import('lottie-web')  // Dynamically import lottie-web player
+    })
+  ],})
 export class AppModule { }

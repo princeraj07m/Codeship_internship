@@ -1,0 +1,13 @@
+.animations-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ng-lottie {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid #ccc;
+}

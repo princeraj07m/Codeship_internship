@@ -1,4 +1,6 @@
+// app.component.ts
 import { Component } from '@angular/core';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-root',
@@ -6,12 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'json-viewer';
-  services = [
-    { name: 'Mobile Apps', path: '/assets/data.json' },
-    { name: 'Cloud Services', path: '/assets/cloud_services.json' },
-    { name: 'Backup Services', path: '/assets/backup.json' },
-    { name: 'RFID Solutions', path: '/assets/rfid.json' },
-    { name: 'Training & Placement', path: '/assets/presentation-work-activity.json' }
-  ];
+  options: AnimationOptions = {
+    path: '/assets/animations/sample.json'
+  };
 }
