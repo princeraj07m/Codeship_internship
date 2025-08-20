@@ -1,0 +1,51 @@
+<button (click)="getdata()">Get data</button>
+
+<table border="1" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Logo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of gotdata()">
+      <td>{{ data.departmentId }}</td>
+      <td>{{ data.departmentName }}</td>
+      <td>{{ data.departmentLogo }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="row pt-2">
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header bg-secondary text-white">
+                New Department
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="">Department Name</label>
+                        <input type="text" [(ngModel)]="deptObj.departmentName" class="form-control"
+                            placeholder="Enter Name">
+                    </div>
+                    <div class="col-12">
+                        <label for="">Department Logo</label>
+                        <input type="text" [(ngModel)]="deptObj.departmentLogo" class="form-control"
+                            placeholder="Enter Logo Url">
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col-6 text-center">
+                        <button class="btn btn-secondary">Reset</button>
+                    </div>
+                    <div class="col-6 text-center"> 
+                        <button class="btn btn-success" (click)="postdata()">Post data </button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+  <form action="#">
+    <div>
+      <h1>Register</h1>
+    </div>
+    <p>This Profile is for : </p>
+    <div class="d-flex gap-2 mb-4">
+      <div class="rounded-pill h-pink pill-border" (click)="setidfor('Self')">Self</div>
+      <div class="rounded-pill h-pink pill-border" (click)="setidfor('Son')">Son</div>
+      <div class="rounded-pill h-pink pill-border" (click)="setidfor('Daughter')">Daughter</div>
+      <div class="rounded-pill h-pink pill-border" (click)="setidfor('Brother')">Brother</div>
+      <div class="rounded-pill h-pink pill-border" (click)="setidfor('Sister')">Sister</div>
+      <div class="rounded-pill h-pink pill-border" (click)="setidfor('Friend')">Friend</div>
+      <div class="rounded-pill h-pink pill-border" (click)="setidfor('Relative')">Relative</div>
+    </div>
+    <p>Gender :</p>
+    <div class="d-flex gap-2 mb-4">
+      @if(idfor == 'Son' || idfor == 'Brother'){
+      <div class="rounded-pill h-pink pill-border">Male</div>
+      }@else if(idfor == 'Daughter' || idfor == 'Sister'){
+      <div class="rounded-pill h-pink pill-border">Female</div>
+      }@else{
+      <div class="rounded-pill h-pink pill-border" (click)="gender = 'Male'">Male</div>
+      <div class="rounded-pill h-pink pill-border" (click)="gender = 'Female'">Female</div>
+      }
+    </div>
+    <label for="imgUpload">Upload an image:</label>
+    <br>
+    <input type="file" id="imgUpload" accept="image/*" required>
+    <button class="rounded-pill px-3 py-1 bg-pink">Submit</button>
+    @if(isgender){
+      <p class="color-pink">Gender is required</p>
+    }
+  </form>
+</div>

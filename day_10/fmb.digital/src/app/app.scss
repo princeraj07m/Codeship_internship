@@ -1,0 +1,429 @@
+video {
+    width: 100vw;
+    height: 120%;
+    position: absolute;
+    mix-blend-mode: multiply;
+}
+
+//section
+.header {
+    background: url('https://fmb.digital/assets/img/hero-1.svg');
+    object-fit: cover;
+    background-repeat: no-repeat;
+    height: 2300px;
+    background-size: 100%;
+}
+
+.h1-text-container {
+    font-family: "DM Serif Text", serif;
+    margin-top: 150px;
+    gap: 8px;
+}
+
+.try-free-btn {
+    background: #DDEE11;
+}
+
+.h1-text-badge {
+    color: #C4E93D;
+}
+
+.tech-partner-text {
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 84px;
+}
+
+.first-h1-text {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 56px;
+}
+
+.last-h1-text {
+    font-size: 48px;
+    font-weight: 400;
+
+}
+
+.span-badge {
+    background: #DDEE11;
+}
+
+.h2-text-container {
+    line-height: 24px;
+    font-size: 20px;
+}
+
+
+
+
+// section 
+
+.bg-custom {
+    background: linear-gradient(98.1deg, #a5da4f .29%, #5dbe92 102.64%);
+}
+
+// our solutions
+
+.our-solutions {
+    background: url("https://www.sioniq.com/assets/images/curveBg.svg")right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-cont>button {
+    background-color: #ecffde;
+}
+
+.btn-cont>button:hover {
+    background-color: #c5c553;
+}
+
+.pc-img {
+    padding-bottom: 60px;
+}
+
+.heading {
+    color: #1a355b;
+    font-family: "DM Serif Text", serif !important;
+    letter-spacing: -.02em;
+}
+
+
+// section 
+.tailored-solutions {
+    background: linear-gradient(90deg, #193980, #2960d7);
+}
+
+.sol-btn {
+    background: linear-gradient(90deg, #5e91ff, #2b6eff);
+    color: white;
+    font-weight: 400;
+    border-radius: 18px;
+    padding: 6px 18px;
+    margin: 40px;
+    border: none;
+
+}
+
+.j-head {
+    color: #eaff6b;
+    ;
+}
+
+.heading2 {
+    font-size: clamp(2rem, 7vw, 48px);
+    font-weight: 600;
+    color: #fff;
+    font-family: "DM Serif Text", serif !important;
+}
+
+.img-tag {
+    font-weight: 400;
+    font-size: clamp(18px, 4vw, 24px);
+    color: #de1;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.desc {
+    font-size: clamp(.85rem, 2vw, .95rem);
+    color: #fff;
+    text-align: center;
+}
+
+.main-cont {
+    padding: 0px 100px;
+}
+
+.img-cont img {
+    height: 250px;
+    width: 360px;
+}
+
+
+.testimonials {
+    background-color: #d3e9f3;
+}
+
+.hnew{
+    color:#18304b;
+}
+
+
+//our promises 
+
+.our-promise{
+    height: 485px;
+    background: linear-gradient(90deg, #193980, #2960d7);
+    width: 100%;
+}
+
+.key-metrics{
+
+    word-wrap:normal;
+    line-height: 56px;
+    font-weight: 400;
+    font-size: 48px;
+    width: 40%;
+}
+
+.top-and-left-border{
+    border: solid 1px white;
+    border-top: none;
+    border-left: none;
+}
+
+.bottom-and-right-border{
+    border: solid 1px white;
+    border-bottom: none;
+    border-right: none;
+}
+
+.bottom-and-left-border{
+    border: solid 1px white;
+    border-bottom: none;
+    border-left: none;
+}
+
+.top-and-right-border{
+    border: solid 1px white;
+    border-top: none;
+    border-right: none;
+}
+
+
+
+
+
+//footer
+
+footer {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  position: relative;
+  top: -1420px;
+}
+
+.footer-top {
+  max-width: 1500px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  border-bottom: 1px solid #4b5563;
+  background-color: rgba(32, 31, 43, 0.5);
+}
+
+@media (min-width: 768px) {
+  .footer-top {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-logo img {
+  max-width: 180px;
+}
+
+.footer-title {
+  color: #22c55e;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  font-size: 0.9rem;
+  color: #d1d5db;
+  margin-bottom: 0.25rem;
+}
+
+.footer-bottom {
+  background-color: #1E4BA1;
+  padding: 1rem 0;
+}
+
+.footer-bottom-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom-container {
+    flex-direction: row;
+  }
+}
+
+.footer-bottom p {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.25rem;
+}
+
+.footer-social a {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #22c55e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// section 
+.circle-section{
+    position: relative;
+    
+    top : -1000px;
+}
+.round {
+    background-color: rgb(25, 60, 132);
+    width: 100%;
+    height: 1300px;
+    top: 148.3px;
+    left: -99.77px;
+    opacity: 1;
+    border: 20px solid #5dbe92;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+}
+
+
+
+.inner-circle-1 {
+    height: 1000px;
+    width: 60%;
+    border: 2px solid rgb(255, 255, 255);
+    position: relative;
+    left: 20%;
+    top: 11%;
+}
+
+.inner-circle-2 {
+    height: 700px;
+    width: 60%;
+    border: 2px solid rgb(255, 255, 255);
+    position: relative;
+    left: 20%;
+    top: 20%;
+}
+
+
+// section images
+.dimg{
+    position: relative;
+    right: 240px;
+    height: 17%;
+}
+
+.img1{
+    top: 190px;
+    right:270px;
+}
+.img2{
+    left:780px;
+    top:200px;
+}
+.img3{
+    left:450px;
+    top:200px;
+}
+.img4{
+    left:520px;
+    top:-20px;
+}
+.img5{
+    right:350px;
+    top:-170px;
+}
+.img6{
+    right: 300px;
+    top : 0px;
+}
+.img7{
+    left:0px;
+    top :13px;
+}
+.img8{
+    right:170px;
+    top :-160px;
+
+}
+.img9{
+    left:100px;
+    top :-370px;
+}
+.img10{
+    left:300px;
+    top :-370px;
+}
+.img11{
+    top:50px;
+    left: -270px;
+}
+.img12{
+    left:-80px;
+    top :-190px;
+
+}
+.img13{
+    left:180px;
+    top :-290px;
+
+}
+.mid{
+    position: relative;
+    top: -210px;
+    left : 40px;
+}
+
+
+//temp class
+.main-container{
+    position: relative;
+    top : -1420px;
+}
+.web-body{
+    height: 4000px;
+    background-color: rgb(39, 96, 219);
+}

@@ -1,0 +1,10 @@
+<div class="animations-container">
+  <div *ngFor="let options of animationOptions; let i = index">
+    <ng-lottie 
+      [options]="options" 
+      (animationCreated)="animationCreated($event, i)"
+      (mouseenter)="play(i)" 
+      (mouseleave)="stop(i)">
+    </ng-lottie>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<p>api works!</p>
+
+<button (click) = "getallusers()"> Get Dog List .........</button>
+
+<div>
+    <ul>
+        @for(dog of doglist; track $index){
+            <li>{{$index+1}}. <h1>{{dog.attributes.name}}</h1> {{dog.attributes.description}}</li>
+            <hr>
+        }
+
+    </ul>
+</div>

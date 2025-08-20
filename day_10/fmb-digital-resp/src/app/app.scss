@@ -1,0 +1,571 @@
+
+div {
+    font-family: "DM Serif Text", serif;
+}
+
+
+// top section 
+
+video {
+    width: 100vw;
+    height: 120%;
+    position: absolute;
+    mix-blend-mode: multiply;
+}
+
+//section
+.header {
+    background: url('https://fmb.digital/assets/img/hero-1.svg');
+    background-position: center -200px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    height: 1500px;
+    background-size: 100%;
+    
+}
+
+.h1-text-container {
+    font-family: "DM Serif Text", serif;
+    margin-top: 150px;
+    gap: 8px;
+}
+
+.try-free-btn {
+    background: #DDEE11;
+}
+.c-logo{
+    height: 28px;
+}
+.c-logo img{
+    height: 28px;
+}
+.h1-text-badge {
+    color: #C4E93D;
+}
+
+.tech-partner-text {
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 84px;
+}
+
+.first-h1-text {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 56px;
+}
+
+.last-h1-text {
+    font-size: 48px;
+    font-weight: 400;
+
+}
+
+.span-badge {
+    background: #DDEE11;
+}
+
+.h2-text-container {
+    line-height: 24px;
+    font-size: 20px;
+}
+
+.main-sec{
+    position: relative;
+    top: -275px;
+    height:2000px
+}
+// Add-on Services
+.bg-custom {
+    background: linear-gradient(98.1deg, #a5da4f .29%, #5dbe92 102.64%);
+}
+
+.c-hfont {
+    font-family: "DM Serif Text", serif;
+    letter-spacing: -.02em;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.c-rounded-top {
+    border-top-left-radius: 225px;
+    border-top-right-radius: 225px;
+    background: linear-gradient(98.1deg, #a5da4f .29%, #5dbe92 102.64%);
+}
+
+.c-font {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: larger;
+}
+
+.c-icon-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: small;
+}
+
+.c-icon-card img {
+    height: 40%;
+    width: auto;
+    object-fit: cover;
+}
+
+@media (max-width : 800px) {
+    .c-icon-card img {
+        height: 25%;
+        width: auto;
+        object-fit: cover;
+    }
+
+    .c-font {
+        font-size: smaller !important;
+    }
+}
+
+
+// Our Solutions
+.our-solutions {
+    background: url("https://www.sioniq.com/assets/images/curveBg.svg")right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-cont>button {
+    background-color: #ecffde;
+}
+
+.btn-cont>button:hover {
+    background-color: #c5c553;
+}
+
+.pc-img {
+    padding-bottom: 60px;
+}
+
+.heading {
+    color: #1a355b;
+    font-family: "DM Serif Text", serif !important;
+    letter-spacing: -.02em;
+}
+
+
+// Our Solutions Tailored for Jewellery
+.tailored-solutions {
+    background: linear-gradient(90deg, #193980, #2960d7);
+}
+
+.sol-btn {
+    background: linear-gradient(90deg, #5e91ff, #2b6eff);
+    color: white;
+    font-weight: 400;
+    border-radius: 18px;
+    padding: 6px 18px;
+    margin: 40px;
+    border: none;
+
+}
+
+.j-head {
+    color: #eaff6b;
+
+}
+
+.heading2 {
+    font-size: clamp(2rem, 7vw, 48px);
+    font-weight: 600;
+    color: #fff;
+    font-family: "DM Serif Text", serif !important;
+}
+
+.img-tag {
+    font-weight: 400;
+    font-size: clamp(18px, 4vw, 24px);
+    color: #de1;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.desc {
+    font-size: clamp(.85rem, 2vw, .95rem);
+    color: #fff;
+    text-align: center;
+}
+
+.main-cont {
+    padding: 0px 100px;
+}
+
+
+.c-card img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+
+.c-card {
+    width: 300px;
+    column-span: 6;
+}
+
+.img-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.c-card {
+    flex: 1 1 300px;
+    max-width: 350px;
+}
+
+// testimonial
+
+.testimonial {
+    background-color: #d3e9f3;
+}
+
+.test-btn {
+    color: white;
+    background: linear-gradient(90deg, #5e91ff, #2b6eff);
+    font-weight: 400;
+    border-radius: 18px;
+    padding: 6px 18px;
+    margin: 40px;
+    border: none;
+
+}
+
+.test-heading {
+    font-size: 70px;
+    font-weight: 550;
+    color: #18304b;
+    margin: 18px 0 0;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.main-cont {
+    padding: 0px 100px;
+}
+
+
+/* flip card From Uiverse.io by joe-watson-sbf */
+.flip-card {
+    background-color: transparent;
+    width: 350px;
+    height: 450px;
+    border: 1px solid #f1f1f1;
+    border-radius: 25px;
+    margin-right: 50px;
+    perspective: 1000px;
+
+    /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-wrap: wrap;
+    padding: 15px;
+}
+.flip-card-back >p{
+    text-align: justify;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+.flip-card-front img{
+    border-radius: 25px;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: rgb(11, 129, 248);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+//flip card end  🎯
+
+//scroll bar 
+div.scrollmenu {
+    background-color: #d3e9f3;
+    overflow: auto;
+    white-space: nowrap;
+}
+.scrollmenu::-webkit-scrollbar {
+  display: none; 
+}
+
+div.scrollmenu>div {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+div.scrollmenu>div:hover {
+    background-color: #2960D7;
+}
+
+
+
+
+//our promises 
+
+.our-promise{
+    height: 485px;
+    background: linear-gradient(90deg, #193980, #2960d7);
+    width: 100%;
+}
+
+.key-metrics{
+    padding-left: 150px;
+    word-wrap:normal;
+    line-height: 56px;
+    font-weight: 400;
+    font-size: 48px;
+    width: 40%;
+}
+
+.top-and-left-border{
+    border: solid 1px white;
+    border-top: none;
+    border-left: none;
+}
+
+.bottom-and-right-border{
+    border: solid 1px white;
+    border-bottom: none;
+    border-right: none;
+}
+
+.bottom-and-left-border{
+    border: solid 1px white;
+    border-bottom: none;
+    border-left: none;
+}
+
+.top-and-right-border{
+    border: solid 1px white;
+    border-top: none;
+    border-right: none;
+}
+
+
+
+
+
+
+// training-placement 
+.training-placement {
+    height: 1200px;
+    background-color: #D3E9F3;
+    background-image: url('/training-placement-bg.png');
+}
+
+
+.start-training-btn {
+    background-color: #103354;
+}
+
+.training-btn {
+    background: linear-gradient(90deg, #5E91FF, #2b6eff);
+    border: none;
+}
+
+.inner-container {
+    padding-top: 100px;
+}
+
+.h1-heading-text {
+    font-size: 48px;
+    color: #103354;
+    font-weight: 600;
+    line-height: 56px;
+}
+
+#wrapper {
+    display: flex;
+    height: 750px;
+}
+
+.column {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    border-radius: 16px;
+    background-color: #B7D3E8;
+    margin: 1em;
+    padding: 1em;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.column:first-child> :last-child,
+.column:last-child> :first-child {
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.card-h1-text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    color: #171E1D;
+}
+
+.card-para-text {
+    color: #181E1E;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+
+
+//footer
+
+footer {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    padding-top: 20px;
+}
+
+.footer-top {
+    max-width: 1500px;
+    margin: auto;
+    padding: 3rem 1.5rem;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    border-radius: 25px;
+    background-color: rgba(32, 31, 43, 0.5);
+}
+
+@media (min-width: 768px) {
+    .footer-top {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-logo img {
+    max-width: 180px;
+}
+
+.footer-title {
+    color: #22c55e;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li {
+    font-size: 0.9rem;
+    color: #d1d5db;
+    margin-bottom: 0.25rem;
+}
+
+.footer-bottom {
+    background-color: #1E4BA1;
+    padding: 1rem 0;
+}
+
+.footer-bottom-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .footer-bottom-container {
+        flex-direction: row;
+    }
+}
+
+.footer-bottom p {
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.25rem;
+}
+
+.footer-social a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #22c55e;
+}

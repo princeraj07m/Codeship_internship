@@ -1,0 +1,206 @@
+// navbar
+.navbar {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: 60px;
+}
+.logo-img{
+    width: 97px;
+    position: relative;
+    bottom: 12px;
+    z-index:22;
+}
+/* Remove extra border and shadow on input */
+.input-group .form-control, .input-group-text {
+  box-shadow: none !important;
+}
+.input-group .form-control:focus {
+  box-shadow: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar-custom {
+    background-color: #008080;
+    height: 120px;
+}
+
+
+/* Sidebar */
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 32px;
+    /* navbar height */
+    left: 0;
+    background-color: #008080;
+    padding-top: 20px;
+    transition: all 0.4s;
+}
+
+.sidebar a {
+    padding: 12px 20px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border: 2px solid white;
+    border-width: 0 0 2px 0;
+}
+.sidebar button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding-bottom: 0;
+    border: 2px solid  #014c4c;;
+    border-width: 0 0 2px 0;
+}
+
+.sidebar a:hover {
+    background-color: #016f6f;
+}
+
+/* Sidebar hidden */
+.sidebar.active {
+    margin-left: -250px;
+}
+
+//side icon start
+
+/* Sidebar */
+.sideicon {
+    height: 100vh;
+    width: 100px;
+    position: fixed;
+    top: 32px;
+    left: 0;
+    background-color: #008080;
+    padding-top: 20px;
+    transition: all 0.6s;
+}
+
+.sideicon a {
+    display: flex;
+    margin-top: 5px;
+    text-align: center;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(255, 152, 0);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sideicon a:hover {
+    background-color: #017171;
+}
+
+/* Sidebar hidden */
+.sideicon.active {
+    margin-left: -250px;
+}
+
+.scroll-box {
+    height: 100vh;
+    /* fixed height */
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+    /* enables vertical scrolling */
+    overflow-x: hidden;
+    /* hide horizontal scrollbar */
+}
+
+
+//side icon end
+
+
+/* Content */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+.content.full {
+    margin-left: 0;
+}
+
+/* Search box */
+.search-box {
+    max-width: 500px;
+}
+
+.c-toggle-btn-icon {
+    background-color: #FF9800;
+    width: 80%;
+}
+.c-toggle-btn {
+    background-color: #017171;
+    width: 80%;
+}
+
+//c-btn
+.c-btn-container {
+    padding: 5px;
+    margin-top: 15px;
+    background-color: #FF9800;
+    display: flex;
+    gap: 7px;
+    border-radius: 20px;
+}
+
+.c-btn-container input[type="radio"] {
+    display: none;
+    /* hide radio */
+}
+
+.c-btn-container label {
+    color: white;
+    background-color: #FF9800;
+    border: none;
+    padding: 7px 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 20px;
+}
+
+/* radio  */
+.c-btn-container input[type="radio"]:checked+label {
+    background-color: white;
+    color: #FF9800;
+    border: 2px solid #FF9800;
+    border-radius: 20px;
+    padding: 7px 10px;
+}
+
+//footer 
+.bg-teal {
+  background-color: #007575 !important;
+}
+.c-footer{
+    z-index: 2;
+    height: 100px;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+.power-btn {
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}

@@ -1,0 +1,31 @@
+/* .container{
+    background-color: red;
+    height: 100px;
+    width:100px;
+    border:10px solid black;
+    border-radius: 10px;
+}
+.img{
+    height: 100px;
+    width:100px;
+} */
+.container2{
+    background: url(https://firebasestorage.googleapis.com/v0/b/zestnutrition-bfe58.appspot.com/o/media%2F1733157469361_SiteHomeHeroImage.jpg?alt=media&quot;);
+    /* background: url("https://tse1.mm.bing.net/th/id/OIP.27SOo3l7hO-zGWB4AeDz5wHaEa?pid=Api"); */
+    height: 100px;
+    width:100px;
+    border:10px solid black;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+p{
+    z-index: 2;
+    color: aliceblue;
+    margin: 0px;
+}

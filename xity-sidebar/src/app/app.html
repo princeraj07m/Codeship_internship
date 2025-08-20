@@ -1,0 +1,166 @@
+<!-- Navbar -->
+<nav class="navbar fixed-top p-0 shadow-sm" style="background-color: #007575; height: 60px;">
+  <div class="container-fluid d-flex align-items-center p-0">
+
+    <!-- Left Logo -->
+    <img src="image.png" class="logo-img" alt="Logo" style="height:60px;" />
+
+    <!-- Search box -->
+    <div class="flex-grow-1 d-flex justify-content-start ms-2 px-5">
+      <div class="input-group align-items-center" style="max-width: 250px;">
+        <span class="input-group-text bg-white border-0 rounded-start-pill px-2" style="height: 35px;">
+          <i class="fa fa-search" style="color: #888;"></i>
+        </span>
+        <input
+          class="form-control border-0 rounded-end-pill px-2"
+          style="height: 35px;"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section d-flex align-items-center ps-4 pe-2 ms-auto" 
+         style="background-color: #ff9800; height: 60px; gap: 10px;">
+
+      <!-- Wallet -->
+      <span class="bg-white d-flex align-items-center rounded-pill px-3 py-1 me-1" style="font-size:15px; height:32px;">
+        <span class="text-info fs-6" style="font-size:14px; margin-right:6px;">●</span>
+        <span class="fw-medium text-dark">Wallet Balance : $6658</span>
+      </span>
+
+      <!-- Website -->
+      <button class="btn btn-light rounded-pill py-0 px-3 me-1" style="height:32px;">
+        <i class="fa fa-globe me-1"></i> Website
+      </button>
+
+      <!-- Plus -->
+      <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center p-0" 
+              style="width:32px; height:32px;">
+        <i class="fa fa-plus"></i>
+      </button>
+
+      <!-- Notifications -->
+      <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center p-0" 
+              style="width:32px; height:32px;">
+        <i class="fa fa-bell"></i>
+      </button>
+
+      <!-- Profile -->
+      <img src="assets/avatar.jpg" class="rounded-circle ms-2" alt="profile"
+           style="width:32px; height:32px; object-fit:cover;" />
+    </div>
+  </div>
+</nav>
+
+
+<!-- Sidebar -->
+<div class="sidebar scroll-box gap-5 mt-3 pt-3" [class.active]="sidebarOpen">
+  <!-- Toggle button -->
+  <button class="btn  c-toggle-btn" (click)="toggleSidebar()">
+    <p>Close menu</p><i class="bi bi-arrow-left"></i>
+  </button>
+  <div class="c-btn-container d-flex justify-content-between">
+    <div (click)="changetype('user')">
+      <input type="radio" id="user" name="mode" checked>
+      <label for="user"><i class="bi bi-person"></i>&nbsp;&nbsp;User</label>
+    </div>
+    <div (click)="changetype('business')">
+      <input type="radio" id="business" name="mode">
+      <label for="business"><i class="bi bi-building"></i>&nbsp;&nbsp;Business</label>
+    </div>
+  </div>
+@if(type == "user"){
+  <a href="#"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;&nbsp;Home</a>
+  <a href="#"><i class="fa-solid fa-user-circle"></i>&nbsp;&nbsp;&nbsp;Profile</a>
+  <a href="#"><i class="fa-solid fa-bell"></i>&nbsp;&nbsp;&nbsp;Notifications</a>
+  <a href="#"><i class="fa-solid fa-heart"></i>&nbsp;&nbsp;&nbsp;Wishlist</a>
+  <a href="#"><i class="fa-solid fa-star"></i>&nbsp;&nbsp;&nbsp;Reviews</a>
+  <a href="#"><i class="fa-solid fa-calendar-check"></i>&nbsp;&nbsp;&nbsp;Bookings</a>
+  <a href="#"><i class="fa-solid fa-calendar-day"></i>&nbsp;&nbsp;&nbsp;Appointment</a>
+  <a href="#"><i class="fa-solid fa-users"></i>&nbsp;&nbsp;&nbsp;Friends</a>
+  <a href="#"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;People Near Me</a>
+  <a href="#"><i class="fa-solid fa-comment-dots"></i>&nbsp;&nbsp;&nbsp;Messages</a>
+  <a href="#"><i class="fa-solid fa-wallet"></i>&nbsp;&nbsp;&nbsp;Wallet</a>
+  <a href="#"><i class="fa-solid fa-bag-shopping"></i>&nbsp;&nbsp;&nbsp;Orders</a>
+  <a href="#"><i class="fa-solid fa-credit-card"></i>&nbsp;&nbsp;&nbsp;Payment</a>
+  <a href="#"><i class="fa-solid fa-map"></i>&nbsp;&nbsp;&nbsp;Addresses</a>
+  <a href="#"><i class="fa-solid fa-file-invoice"></i>&nbsp;&nbsp;&nbsp;Invoice</a>
+  <a href="#"><i class="fa-solid fa-key"></i>&nbsp;&nbsp;&nbsp;Password</a>
+  <a href="#"><i class="fa-solid fa-gear"></i>&nbsp;&nbsp;&nbsp;Settings</a>
+  <a href="#"><i class="fa-solid fa-user-slash"></i>&nbsp;&nbsp;&nbsp;Deactivate Account</a>
+}
+
+@if(type == "business"){
+  <a href="#"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;&nbsp;Home</a>
+  <a href="#"><i class="fa-solid fa-user-circle"></i>&nbsp;&nbsp;&nbsp;Profile</a>
+  <a href="#"><i class="fa-solid fa-bell"></i>&nbsp;&nbsp;&nbsp;Notifications</a>
+  <a href="#"><i class="fa-solid fa-heart"></i>&nbsp;&nbsp;&nbsp;Wishlist</a>
+  <a href="#"><i class="fa-solid fa-star"></i>&nbsp;&nbsp;&nbsp;Reviews</a>
+  <a href="#"><i class="fa-solid fa-calendar-check"></i>&nbsp;&nbsp;&nbsp;Bookings</a>
+  <a href="#"><i class="fa-solid fa-calendar-day"></i>&nbsp;&nbsp;&nbsp;Appointment</a>
+  <a href="#"><i class="fa-solid fa-comment-dots"></i>&nbsp;&nbsp;&nbsp;Messages</a>
+  <a href="#"><i class="fa-solid fa-bag-shopping"></i>&nbsp;&nbsp;&nbsp;Orders</a>
+  <a href="#"><i class="fa-solid fa-credit-card"></i>&nbsp;&nbsp;&nbsp;Payment</a>
+  <a href="#"><i class="fa-solid fa-file-invoice"></i>&nbsp;&nbsp;&nbsp;Invoice</a>
+}
+</div>
+
+<div class="sideicon scroll-box gap-5 icon-container mt-3 pt-3" [class.active]="sideIconopen">
+  <!-- Toggle button -->
+  <button class="btn btn-light me-3 m-2 c-toggle-btn-icon" (click)="toggleSidebar()">
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+  <a href="#"><i class="fa-solid fa-house"></i></a>
+  <a href="#"><i class="fa-solid fa-user-circle"></i></a>
+  <a href="#"><i class="fa-solid fa-bell"></i></a>
+  <a href="#"><i class="fa-solid fa-heart"></i></a>
+  <a href="#"><i class="fa-solid fa-star"></i></a>
+  <a href="#"><i class="fa-solid fa-calendar-check"></i></a>
+  <a href="#"><i class="fa-solid fa-calendar-day"></i></a>
+  <a href="#"><i class="fa-solid fa-users"></i></a>
+  <a href="#"><i class="fa-solid fa-location-dot"></i></a>
+  <a href="#"><i class="fa-solid fa-comment-dots"></i></a>
+  <a href="#"><i class="fa-solid fa-wallet"></i></a>
+  <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+  <a href="#"><i class="fa-solid fa-credit-card"></i></a>
+  <a href="#"><i class="fa-solid fa-map"></i></a>
+  <a href="#"><i class="fa-solid fa-file-invoice"></i></a>
+  <a href="#"><i class="fa-solid fa-key"></i></a>
+  <a href="#"><i class="fa-solid fa-gear"></i></a>
+  <a href="#"><i class="fa-solid fa-user-slash"></i></a>
+</div>
+
+
+<!-- Content -->
+<div class="content" [class.full]="!sidebarOpen">
+  <!-- <h2>Dashboard</h2> -->
+</div>
+
+<div class="d-flex flex-column min-vh-100">
+
+  <!-- Main content -->
+  <main class="flex-fill" style="background-color:#e0ffff;">
+    <div class="container py-5">
+      <!-- Your page content goes here... -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-teal text-white d-flex justify-content-between align-items-center c-footer">
+    <button class="btn btn-sm power-btn" style="background:#ff9800; color:white; border-radius:6px;">
+        <i class="bi bi-power"></i>
+      </button>
+    <div>
+      © Gudhi Nexus © 2022-25 | Contact Us
+    </div>
+    <div class="d-flex align-items-center gap-3">
+      <span>Legal</span>
+      <span>|</span>
+      <span><i class="bi bi-globe"></i> Countries</span>
+      
+    </div>
+  </footer>
+</div>
