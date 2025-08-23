@@ -7,8 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Background Changer</h1>
-    <div class="object"></div>
+    <h1 class="neon-title">CYBERPUNK COLOR TERMINAL</h1>
+    <div class="dashboard">
+        <div class="object"></div>
+        <div class="panel status-grid">
+            <div class="status-item">
+                <h3>SYSTEM STATUS</h3>
+                <p class="neon-text">FRAMERATE: <span id="fps-counter">60</span> FPS</p>
+                <p class="neon-text">COLOR HEX: <span id="hex-value">#00FF9D</span></p>
+            </div>
+            <div class="panel hologram-effect">
+                <div class="scanline"></div>
+            </div>
+            <div class="panel datetime-display">
+                <h3>DATETIME</h3>
+                <p class="neon-text" id="datetime">Current Time</p>
+            </div>
+        </div>
+    </div>
     
     <div id="color-buttons">
         <button>RED</button>
@@ -19,8 +35,13 @@
     </div>
     <hr>
     <h3>custom color</h3>
-    <input type="color" name="customColor" id="customColor">
+    <div class="color-picker-container">
+        <input type="color" name="customColor" id="customColor">
+        <div id="particle-container"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+<!-- Add datetime display element -->
+<div id="datetime" class="datetime-display"></div>

@@ -1,0 +1,476 @@
+// .sticky_menu {
+//   position: fixed;
+//   left: 0px;
+//   height: 100vh;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+// }
+
+
+.sticky_menu {
+  position: fixed;
+  left: 0;
+  top: 0px; 
+  height: 100vh; 
+  width: 10.6667%; /* Matches Bootstrap's col-lg-2 (1/6 of 100%) */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--primary-color); 
+  z-index: 10;
+  transition: all 0.3s ease; 
+}
+
+.view_on_small{
+  display: none;
+}
+
+@media (max-width: 1500px) { 
+  .sticky_menu {
+    display: none; 
+  }
+
+  .view_on_small{
+    display: block;
+  }
+}
+
+.content_area {
+  width: 100%; 
+}
+
+.overflow {
+  overflow-x: hidden; 
+  padding-left: 0; 
+}
+
+@media (min-width: 1500px) { 
+  .content_area {
+    margin-left: 4.6667%; 
+  }
+}
+
+
+//
+.main_container {
+  display: flex;
+  height: 100vh;
+}
+
+// work
+.work_img_wrapper {
+  height: 400px;
+  width: auto;
+}
+
+.image-wrapper {
+  cursor: pointer;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-wrapper:hover {
+  transform: scale(0.9); /* Shrinks the wrapper */
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.2); /* Zooms the image */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-color: #0000007d;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-wrapper:hover .overlay-text {
+  opacity: 1;
+}
+
+//
+.mobile_wrapper {
+  height: 250px;
+}
+
+.card_info_wrapper {
+  background-color: white;
+  color: black !important;
+  position: relative;
+  cursor: pointer;
+  z-index: 9999 !important;
+  width: 95%;
+}
+
+.card_info_wrapper:hover {
+  background-color: black;
+  color: white !important;
+}
+
+.line_black_toggle {
+  width: 100px;
+  height: 3px;
+  background-color: black;
+}
+
+.card_info_wrapper:hover .line_black_toggle {
+  background-color: white !important;
+}
+
+.black_bg_absolute {
+  background-color: var(--secondry-color);
+  height: 80px;
+  width: 300px;
+  margin-top: -60px;
+  margin-right: 10px;
+}
+
+.services_section_bg {
+  // background-image: url("/image/about_section_bg.png");
+    background-color: var(--secondry-color);
+  background-repeat: no-repeat;
+}
+
+.service_info {
+  color: black;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.service_info:hover {
+  background-color: black;
+  color: white;
+}
+
+.service_info_icon {
+  position: absolute;
+  left: 0;
+}
+
+.about_main_banner {
+  height: 420px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: all 0.3s ease-in-out;
+}
+
+.about_banner {
+  height: 200px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.about_on_hover {
+  display: none;
+}
+
+.about_main_banner:hover .about_on_hover {
+  display: block;
+}
+
+.about_banner:hover .about_on_hover {
+  display: block;
+}
+
+//team
+.team_card_wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.team_card_wrapper:hover .team_img_social {
+  display: flex;
+}
+
+.team_card_wrapper:hover .team_info_90 {
+  background-color: black;
+  color: white;
+}
+
+.team_card_wrapper:hover .team_img {
+  transform: scale(1);
+}
+
+.team_card_wrapper:hover .team_user_icon {
+  background-color: white;
+  color: black;
+}
+
+.team_img_wrapper {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-bottom-left-radius: 50px;
+}
+
+.team_img {
+  width: 90%;
+  border-bottom-left-radius: 50px;
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+.team_img_social {
+  width: 10%;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  font-size: 25px;
+  flex-direction: column;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.team_info_20 {
+  width: 10%;
+}
+
+.team_info_90 {
+  width: 90%;
+  border-bottom-right-radius: 50px;
+}
+
+.team_user_icon {
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  border-top-right-radius: 25px;
+  right: 7%;
+  top: 75%;
+}
+
+//
+.circle_toggle {
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.bg_circle {
+  background-color: #f2f2f2;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  left: -50px;
+  transition: all 0.5s ease;
+  position: absolute;
+  z-index: 1;
+  transform-origin: 50% 100%;
+}
+
+.bg_circle_black {
+  background-color: black;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  left: -50px;
+  opacity: 0; /* Hidden by default */
+  transform: scale(0) rotateX(0deg);
+  transition: all 0.5s ease;
+  position: absolute;
+  z-index: 2;
+  transform-origin: 50% 100%;
+}
+
+.circle_text {
+  position: relative;
+  z-index: 5;
+  font-size: 18px;
+  font-weight: 600px;
+}
+
+.circle_toggle:hover {
+  .bg_circle {
+    opacity: 0;
+    transform: scale(0) rotateX(180deg);
+  }
+
+  .bg_circle_black {
+    opacity: 1;
+    transform: scale(1) rotateX(360deg);
+  }
+
+  .circle_text {
+    color: #ff5c00;
+  }
+}
+
+//
+.partner_wrapper {
+  background-color: #262626;
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line_white_toggle {
+  width: 100px;
+  height: 3px;
+  background-color: white;
+}
+
+.testimonial_img_wrapper {
+  height: 400px;
+}
+
+//
+.custom_grid_1 {
+  border-radius: 60px 20px 20px 20px;
+  overflow: hidden;
+  height: 300px;
+}
+.custom_grid_2 {
+  border-radius: 80px 20px 80px 20px;
+  overflow: hidden;
+  height: 250px;
+}
+.custom_grid_3 {
+  border-radius: 80px 20px 80px 20px;
+  overflow: hidden;
+  height: 250px;
+}
+.custom_grid_4 {
+  border-radius: 20px 20px 80px 20px;
+  overflow: hidden;
+  height: 300px;
+}
+
+.grid_btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 70px;
+  width: 70px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.white_border_text {
+  color: var(--primary-color);
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+    1px 1px 0 white;
+  font-size: 55px;  
+}
+
+
+.font_50{
+  font-size: 50px;
+}
+
+
+.circle{
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+//
+.custom_button {
+    /* Default styling */
+    background-color: black;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    border: 1px solid white;
+}
+
+/* Create the animated fill effect using a pseudo-element */
+.custom_button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: white;
+    transition: height 0.3s ease;
+    z-index: -1;
+}
+
+/* Hover effects */
+.custom_button:hover {
+    color: black;
+    z-index: 2;
+}
+
+.custom_button:hover::before {
+    height: 100%;
+    z-index: 1;
+}
+
+
+
+
+.team_header_wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media(max-width:600px){
+  .team_header_wrapper{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .bg_circle{
+    height: 50px;
+    width: 50px;
+    left: -20px;
+  }
+
+  .bg_circle_black{
+    height: 50px;
+    width: 50px;
+    left: -20px;
+  }
+}
+.whiten_image{
+  filter: brightness(0) invert(1) grayscale(100%) brightness(1) contrast(100%) !important;
+}

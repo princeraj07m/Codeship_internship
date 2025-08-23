@@ -1,15 +1,184 @@
 .object{
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-    border: 2px dotted black;
+    width: 150px;
+    height: 150px;
+    background-color: #00ff9d;
+    border: 2px solid rgba(0, 255, 157, 0.5);
     border-radius: 50%;
-    transition: background-color 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    box-shadow: 0 0 30px rgba(0, 255, 157, 0.3);
+    animation: glow 2s infinite;
 }
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(45deg, #0a0a2e, #1a1a4a);
+    min-height: 100vh;
+    color: #00ff9d;
+    font-family: 'Courier New', monospace;
+}
+
+@keyframes glow {
+    0% {
+        filter: drop-shadow(0 0 2px #00ff9d)
+                drop-shadow(0 0 5px #00ff9d55);
+        transform: scale(1);
+    }
+    50% {
+        filter: drop-shadow(0 0 15px #00ff9d)
+                drop-shadow(0 0 30px #00ff9d88);
+        transform: scale(1.05);
+    }
+    100% {
+        filter: drop-shadow(0 0 2px #00ff9d)
+                drop-shadow(0 0 5px #00ff9d55);
+        transform: scale(1);
+    }
+}
+
+.neon-title {
+    animation: flicker 1.5s infinite alternate;
+    text-shadow: 0 0 5px #00ff9d;
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 0 0 5px #00ff9d,
+                    0 0 10px #00ff9d,
+                    0 0 20px #00ff9d,
+                    0 0 40px #00ff9d88;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(0deg, #00ff9d0a 1px, transparent 1px),
+        linear-gradient(90deg, #00ff9d0a 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: scan 30s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes scan {
+    from { background-position: 0 0; }
+    to { background-position: 20px 20px; }
+}
+
+.color-picker-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+#particle-container {
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #00ff9d;
+    border-radius: 50%;
+    animation: particleFade 1s ease-out forwards,
+              particleMove 1s linear forwards;
+    filter: drop-shadow(0 0 2px #00ff9d);
+}
+
+@keyframes particleFade {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.3); }
+}
+
+@keyframes particleMove {
+    100% {
+        transform: translate(
+            calc(var(--dx) * 50px),
+            calc(var(--dy) * 50px)
+        );
+    }
+}
+
+input[type="color"] {
+    cursor: pointer;
+    background: #0a0a2e;
+    border: 2px solid #00ff9d;
+    border-radius: 5px;
+    padding: 3px;
+    transition: transform 0.3s ease;
+}
+
+input[type="color"]:hover {
+    transform: scale(1.1);
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.panel {
+    background: linear-gradient(145deg, #0a0a2eaa, #1a1a4aaa);
+    border: 1px solid #00ff9d;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.1);
+}
+
+.status-item {
+    position: relative;
+    z-index: 1;
+}
+
+.hologram-effect {
+    position: relative;
+    height: 200px;
+    background: linear-gradient(45deg, #00ff9d11, transparent 50%);
+    margin-top: 20px;
+}
+
+.scanline {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        #00ff9d0a 51%,
+        transparent 51%
+    );
+    background-size: 100% 4px;
+    animation: scan 2s linear infinite;
+}
+
+.neon-text {
+    text-shadow: 0 0 5px #00ff9d;
+    margin: 10px 0;
+}
+
+.status-grid {
+    display: grid;
+    gap: 15px;
 }
 
 #color-buttons {
@@ -19,4 +188,130 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 20px;
+    gap: 15px;
+}
+
+#color-buttons button {
+    padding: 12px 24px;
+    background: transparent;
+    border: 2px solid #00ff9d;
+    color: #00ff9d;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#color-buttons button:hover {
+    background: #00ff9d22;
+    box-shadow: 0 0 15px #00ff9d;
+    transform: translateY(-2px);
+}
+
+#color-buttons button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        transparent, #00ff9d, transparent 30%
+    );
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}
+
+.panel datetime-display {
+    background: linear-gradient(145deg, #0a0a2eaa, #1a1a4aaa);
+    border: 1px solid #00ff9d;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.1);
+}
+.panel datetime-display p {
+    position: relative;
+    z-index: 1;
+}
+/* Add flicker animation for sci-fi effect */
+@keyframes flicker {
+    0% { opacity: 1; }
+    5% { opacity: .8; }
+    10% { opacity: 1; }
+    15% { opacity: .8; }
+    20% { opacity: 1; }
+    25% { opacity: .8; }
+    30% { opacity: 1; }
+    35% { opacity: .8; }
+    40% { opacity: 1; }
+    45% { opacity: .8; }
+    50% { opacity: 1; }
+    55% { opacity: .8; }
+    60% { opacity: 1; }
+    65% { opacity: .8; }
+    70% { opacity: 1; }
+    75% { opacity: .8; }
+    80% { opacity: 1; }
+    85% { opacity: .8; }
+    90% { opacity: 1; }
+    95% { opacity: .8; }
+    100% { opacity: 1; }
+}
+
+.panel datetime-display p {
+    position: relative;
+    z-index: 1;
+    animation: flicker 2s infinite;
+}
+/* Add scan line effect for sci-fi aesthetic */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 100% 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+/* Add pulsing animation for sci-fi effect */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 255, 157, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 255, 157, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 255,  157, 0); }
+}
+
+.panel datetime-display {
+    animation: pulse 2s infinite;
+}
+/* Add grid background for sci-fi aesthetic */
+body {
+    background-color: #0a0a2e;
+    background-image: linear-gradient(to right, #0a0a2e 1px, transparent 1px),
+                      linear-gradient(to bottom, #0a0a2e 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+/* Add border glow animation for sci-fi effect */
+@keyframes borderGlow {
+    0% { box-shadow: 0 0 5px #00ff9d; }
+    50% { box-shadow: 0 0 20px #00ff9d; }
+    100% { box-shadow: 0 0 5px #00ff9d; }
+}
+/* Add neon glow animation for sci-fi effect */
+@keyframes neonGlow {
+    0% { box-shadow: 0 0 5px #00ffff; }
+    50% { box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff; }
+    100% { box-shadow: 0 0 5px #00ffff; }
+}
+.panel datetime-display {
+    animation: neonGlow 1s infinite;
 }

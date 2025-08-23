@@ -1,0 +1,250 @@
+<!-- HERO / SEARCH (FULL WIDTH) -->
+<section class="d-flex align-items-center mt-5">
+  <div class="hero-wrap container-lg container-md ">
+    <div class="row gx-4 align-items-center">
+      <!-- left: text + search -->
+      <div class=" col-lg-7 col-md-8">
+        <div class="hero-left">
+          <h1 class="hero-title">Let's Explore</h1>
+          <p class="hero-sub mt-lg-4">
+            All the top locations - from restaurants and clubs, to cinemas, galleries, and more.
+          </p>
+
+          <form class="search-form d-flex align-items-center justify-content-between bg-white mt-lg-4"
+            (submit)="$event.preventDefault()">
+            <div class="select-wrap me-2 col-8 d-flex align-items-center c-border-black">
+              <p class="text-black m-0 px-sm-2 px-lg-3"><i class="fa-solid fa-bars"></i></p>
+              <ng-select class="form-select custom-select border-0" name="category" [items]="categories"
+                bindLabel="name" bindValue="id" placeholder="All Categories" [(ngModel)]="selectedCategory">
+              </ng-select>
+            </div>
+
+            <button class="btn btn-search col-3 c-btn text-white"><i
+                class="fa-solid fa-magnifying-glass"></i>&nbsp;&nbsp;SEARCH</button>
+          </form>
+
+        </div>
+      </div>
+
+      <!-- right: hero image -->
+      <div class="col-lg-5 col-md-4 d-none d-md-block text-end p-0">
+        <img src="assets/hero-right.png" alt="hero" class="img-hero" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECENT LISTINGS -->
+<section class="py-4">
+  <div class="container">
+    <h4 class="section-title text-center">Recent Listings</h4>
+    <div class="row gx-3 gy-3 mt-3">
+      <div class="col-sm-6 col-md-4" *ngFor="let r of recentListings">
+        <div class="card listing-card">
+          <div class="c-size">
+            <img [src]="r.image" class="card-img-top" alt="listing" />
+          </div>
+          <div class="d-flex">
+            <div class="card-body">
+              <p class="c-color m-0">{{r.type}}</p>
+              <h6 class="card-title mb-1 c-fs-h">{{r.name}}</h6>
+              <p class="text-muted small mb-0">{{r.category}}</p>
+            </div>
+            <div class=" p-3 pt-4 d-flex flex-column align-items-center gap-5">
+              <button class="rounded-circle p-0 m-0 text-white border-0 heart" style="height: 40px; width: 40px;"><i class="fa-solid fa-heart"></i></button>
+              <button class="c-bg text-white border-0" style="height: 40px; width: 40px;"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Listings  -->
+<div class="container py-5">
+  <h2 class="text-center fw-bold">Featured Listings</h2>
+  <p class="text-center text-muted mb-4">What are you interested.</p>
+
+  <div class="row g-3">
+    <!-- Professionals -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card text-white border-0 shadow-sm">
+        <img src="assets/featured/1.jpg" class="card-img rounded-3" alt="Professionals">
+        <div class="card-img-overlay d-flex bg-dark bg-opacity-50 rounded-3">
+          <div>
+            <i class="fas fa-user-tie rounded-circle heart d-flex align-items-center justify-content-center" 
+               style="height: 40px; width: 40px;"></i>
+          </div>
+          <div>
+            <h5 class="card-title">Professionals</h5>
+            <p class="card-text">Check out selection</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Handymen -->
+    <div class="col-md-6 col-lg-8">
+      <div class="card text-white border-0 shadow-sm">
+        <img src="assets/featured/2.jpg" class="card-img rounded-3" alt="Handymen">
+        <div class="card-img-overlay d-flex bg-dark bg-opacity-50 rounded-3">
+          <div>
+            <i class="fas fa-tools rounded-circle heart d-flex align-items-center justify-content-center" 
+               style="height: 40px; width: 40px;"></i>
+          </div>
+          <div>
+            <h5 class="card-title">Handymen</h5>
+            <p class="card-text">Check out selection</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Government -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card text-white border-0 shadow-sm">
+        <img src="assets/featured/3.jpg" class="card-img rounded-3" alt="Government">
+        <div class="card-img-overlay d-flex bg-dark bg-opacity-50 rounded-3">
+          <div>
+            <i class="fas fa-landmark rounded-circle heart d-flex align-items-center justify-content-center" 
+               style="height: 40px; width: 40px;"></i>
+          </div>
+          <div>
+            <h5 class="card-title">Government</h5>
+            <p class="card-text">Check out selection</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Community -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card text-white border-0 shadow-sm">
+        <img src="assets/featured/4.jpg" class="card-img rounded-3" alt="Community">
+        <div class="card-img-overlay d-flex bg-dark bg-opacity-50 rounded-3">
+          <div>
+            <i class="fas fa-users rounded-circle heart d-flex align-items-center justify-content-center" 
+               style="height: 40px; width: 40px;"></i>
+          </div>
+          <div>
+            <h5 class="card-title">Community</h5>
+            <p class="card-text">Check out selection</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BrandUp -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card text-white border-0 shadow-sm">
+        <img src="assets/featured/5.jpg" class="card-img rounded-3" alt="BrandUp">
+        <div class="card-img-overlay d-flex bg-dark bg-opacity-50 rounded-3">
+          <div>
+            <i class="fas fa-certificate rounded-circle heart d-flex align-items-center justify-content-center" 
+               style="height: 40px; width: 40px;"></i>
+          </div>
+          <div>
+            <h5 class="card-title">BrandUp</h5>
+            <p class="card-text">Check out selection</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container my-4">
+  <div class="stats-box p-4 rounded text-white">
+    <div class="row text-center">
+      
+      <!-- Businesses -->
+      <div class="col-6 col-md-3 mb-3 mb-md-0">
+        <h3>0</h3>
+        <p>Businesses</p>
+      </div>
+
+      <!-- Professionals -->
+      <div class="col-6 col-md-3 mb-3 mb-md-0">
+        <h3>0</h3>
+        <p>Professionals</p>
+      </div>
+
+      <!-- Handymen -->
+      <div class="col-6 col-md-3 mb-3 mb-md-0">
+        <h3>2</h3>
+        <p>Handymen</p>
+      </div>
+
+      <!-- Users -->
+      <div class="col-6 col-md-3">
+        <h3>0</h3>
+        <p>Users</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- coupans  -->
+<!-- <div class="container py-4">
+  <h2 class="text-center fw-bold mb-4">Coupons</h2>
+
+  <div id="couponCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+    <div class="carousel-inner">
+
+       Each slide -->
+      <!-- <div *ngFor="let chunk of couponChunks; let i = index" 
+           class="carousel-item" 
+           [class.active]="i === 0">
+        <div class="row justify-content-center"> -->
+
+          <!-- Cards in each row -->
+          <!-- <div class="col-12 col-md-4 mb-3" *ngFor="let coupon of chunk">
+            <div class="card shadow-sm h-100">
+              <img [src]="coupon.image" class="card-img-top" alt="Coupon image" />
+              <div class="card-body text-center">
+                <div class="d-flex justify-content-center gap-2 mb-2 text-muted">
+                  <small><i class="bi bi-geo-alt"></i> {{ coupon.location }}</small>
+                  <small><i class="bi bi-shop"></i> {{ coupon.store }}</small>
+                </div>
+                <h5 class="text-warning fw-bold">{{ coupon.discount }}</h5>
+                <p class="text-muted mb-2">{{ coupon.details }}</p>
+                <small class="text-secondary d-block mb-3">
+                  <i class="bi bi-clock"></i> Expires on {{ coupon.expiry }}
+                </small>
+                <button class="btn btn-teal w-100">SHOW CODE</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div> --> 
+
+    <!-- Carousel Controls -->
+    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#couponCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#couponCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+     Indicators -->
+<!-- <div class="carousel-indicators custom-indicators mt-3">
+  <button *ngFor="let chunk of couponChunks; let i = index"
+          type="button"
+          data-bs-target="#couponCarousel"
+          [attr.data-bs-slide-to]="i"
+          [class.active]="i === 0"
+          aria-current="true"
+          aria-label="Slide {{ i + 1 }}">
+  </button>
+</div>
+
+  </div>
+</div> -->

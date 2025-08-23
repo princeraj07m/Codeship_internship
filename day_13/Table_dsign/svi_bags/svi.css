@@ -1,0 +1,122 @@
+body {
+    font-family: "Jost", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.main-table {
+    width: 580px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+}
+.logo {
+    text-align: center;
+    padding: 20px 0;
+}
+.logo div {
+    font-size: 24px;
+    font-weight: bold;
+}
+.header-text {
+    text-align: center;
+    font-weight: 700px;
+    font-size: 23px;
+    padding: 10px 0;
+}
+.model{
+    border: 10px solid black;
+}
+.loc{
+    font-size: 30px;
+}
+.sub-header-text {
+    font-family: "Kapakana", cursive;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 37px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 50px;
+}
+.bg-black{
+    background-color: #000000;
+}
+.kapakana{
+    font-family: "Kapakana", cursive;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.jost{
+    font-family: "Jost", sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+}
+.dotted-line {
+    border-top: 1px dotted #cccccc;
+    height: 1px;
+    margin-top: 30px;
+}
+.date {
+    font-size: 36px;
+    font-weight: bold;
+    text-align:end;
+    vertical-align: top;
+    width: 50%;
+}
+.date div {
+    line-height: 1.2;
+}
+.timing {
+    font-size: 14px;
+    vertical-align: top;
+    line-height: 100%;
+    border-left: 2px solid black;
+    text-align: start;
+    font-family: "Jost", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+.mid-sec{
+    text-align: center;
+}
+.description {
+    font-family: "Jost", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+    line-height: 18px;
+}
+.button-container {
+    text-align: center;
+    padding: 10px 0;
+}
+.button {
+    font-family: "Jost", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+.footer-text {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+.social-media {
+    text-align: center;
+    padding: 10px 0 20px 0;
+}
+.social-media div {
+    font-family: "Jost", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px 0;
+    font-size: 12px;
+}
+.social-media a {
+    margin: 0 5px;
+}

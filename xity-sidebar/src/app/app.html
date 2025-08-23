@@ -11,19 +11,14 @@
         <span class="input-group-text bg-white border-0 rounded-start-pill px-2" style="height: 35px;">
           <i class="fa fa-search" style="color: #888;"></i>
         </span>
-        <input
-          class="form-control border-0 rounded-end-pill px-2"
-          style="height: 35px;"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
+        <input class="form-control border-0 rounded-end-pill px-2" style="height: 35px;" type="search"
+          placeholder="Search" aria-label="Search" />
       </div>
     </div>
 
     <!-- Right Section -->
-    <div class="right-section d-flex align-items-center ps-4 pe-2 ms-auto" 
-         style="background-color: #ff9800; height: 60px; gap: 10px;">
+    <div class="right-section d-flex align-items-center ps-4 pe-2 ms-auto"
+      style="background-color: #ff9800; height: 60px; gap: 10px;">
 
       <!-- Wallet -->
       <span class="bg-white d-flex align-items-center rounded-pill px-3 py-1 me-1" style="font-size:15px; height:32px;">
@@ -37,20 +32,20 @@
       </button>
 
       <!-- Plus -->
-      <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center p-0" 
-              style="width:32px; height:32px;">
+      <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center p-0"
+        style="width:32px; height:32px;">
         <i class="fa fa-plus"></i>
       </button>
 
       <!-- Notifications -->
-      <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center p-0" 
-              style="width:32px; height:32px;">
+      <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center p-0"
+        style="width:32px; height:32px;">
         <i class="fa fa-bell"></i>
       </button>
 
       <!-- Profile -->
       <img src="assets/avatar.jpg" class="rounded-circle ms-2" alt="profile"
-           style="width:32px; height:32px; object-fit:cover;" />
+        style="width:32px; height:32px; object-fit:cover;" />
     </div>
   </div>
 </nav>
@@ -72,7 +67,7 @@
       <label for="business"><i class="bi bi-building"></i>&nbsp;&nbsp;Business</label>
     </div>
   </div>
-@if(type == "user"){
+  @if(type == "user"){
   <a href="#"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;&nbsp;Home</a>
   <a href="#"><i class="fa-solid fa-user-circle"></i>&nbsp;&nbsp;&nbsp;Profile</a>
   <a href="#"><i class="fa-solid fa-bell"></i>&nbsp;&nbsp;&nbsp;Notifications</a>
@@ -91,9 +86,9 @@
   <a href="#"><i class="fa-solid fa-key"></i>&nbsp;&nbsp;&nbsp;Password</a>
   <a href="#"><i class="fa-solid fa-gear"></i>&nbsp;&nbsp;&nbsp;Settings</a>
   <a href="#"><i class="fa-solid fa-user-slash"></i>&nbsp;&nbsp;&nbsp;Deactivate Account</a>
-}
+  }
 
-@if(type == "business"){
+  @if(type == "business"){
   <a href="#"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;&nbsp;Home</a>
   <a href="#"><i class="fa-solid fa-user-circle"></i>&nbsp;&nbsp;&nbsp;Profile</a>
   <a href="#"><i class="fa-solid fa-bell"></i>&nbsp;&nbsp;&nbsp;Notifications</a>
@@ -105,7 +100,7 @@
   <a href="#"><i class="fa-solid fa-bag-shopping"></i>&nbsp;&nbsp;&nbsp;Orders</a>
   <a href="#"><i class="fa-solid fa-credit-card"></i>&nbsp;&nbsp;&nbsp;Payment</a>
   <a href="#"><i class="fa-solid fa-file-invoice"></i>&nbsp;&nbsp;&nbsp;Invoice</a>
-}
+  }
 </div>
 
 <div class="sideicon scroll-box gap-5 icon-container mt-3 pt-3" [class.active]="sideIconopen">
@@ -150,17 +145,21 @@
 
   <!-- Footer -->
   <footer class="bg-teal text-white d-flex justify-content-between align-items-center c-footer">
-    <button class="btn btn-sm power-btn" style="background:#ff9800; color:white; border-radius:6px;">
-        <i class="bi bi-power"></i>
-      </button>
-    <div>
-      © Gudhi Nexus © 2022-25 | Contact Us
+    <button class="btn btn-sm power-btn d-flex align-items-center justify-content-center"
+      style="background:#ff9800; color:white; border-radius:6px;">
+      <i _ngcontent-ng-c1273748155="" class="fa-solid fa-power-off fa-xl"></i>
+    </button>
+    <div class="d-flex justify-content-around">
+      <div>
+        © Gudhi Nexus © 2022-25 | Contact Us
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span>Legal</span>
+        <span>|</span>
+        <span><i class="bi bi-globe"></i> Countries</span>
+
+      </div>
     </div>
-    <div class="d-flex align-items-center gap-3">
-      <span>Legal</span>
-      <span>|</span>
-      <span><i class="bi bi-globe"></i> Countries</span>
-      
-    </div>
+
   </footer>
 </div>
