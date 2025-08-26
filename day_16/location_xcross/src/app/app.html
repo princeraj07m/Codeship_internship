@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="card-cont d-flex flex-row">
+    @for(data of headData; track $index){
+    <div class="card">
+      <img [src]="data.img" alt="{{ data.name }}" />
+      <h5>{{ data.name }}</h5>
+      <p>{{ data.phone }}</p>
+    </div>
+    }
+  </div>
+</div>
