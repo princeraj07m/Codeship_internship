@@ -1,0 +1,199 @@
+:host {
+  --neon-blue: #00faff;
+  --neon-pink: #ff00ff;
+  --matrix-green: #00ff66;
+  --dark-bg: #000814;
+  --text-bright: #e0ffff;
+}
+
+body {
+  background: radial-gradient(circle at center, #001a22, #000);
+  min-height: 100vh;
+  font-family: 'Courier New', monospace;
+  color: var(--text-bright);
+  text-shadow: 0 0 10px var(--neon-blue);
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  position: relative;
+  max-width: 850px;
+  padding: 2rem;
+  background: rgba(0, 18, 25, 0.95);
+  border: 2px solid var(--neon-blue);
+  border-radius: 8px;
+  box-shadow: 0 0 25px var(--neon-blue), inset 0 0 15px rgba(0, 255, 255, 0.2);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Scanline overlay */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 255, 0.06) 0px,
+    rgba(0, 255, 255, 0.06) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  animation: scan 6s linear infinite;
+}
+
+@keyframes scan {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(100%); }
+}
+
+/* Neon Headings */
+h2, h4, .neon-text {
+  color: var(--matrix-green);
+  text-transform: uppercase;
+  text-shadow:
+    0 0 5px var(--matrix-green),
+    0 0 15px var(--matrix-green),
+    0 0 25px var(--neon-blue);
+  animation: flicker 2.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.6; }
+}
+
+/* Labels */
+.form-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--neon-blue);
+  text-shadow: 0 0 8px var(--neon-blue), 0 0 15px var(--neon-pink);
+}
+
+/* Inputs */
+.form-control, .form-select {
+  background: rgba(0, 0, 0, 0.85) !important;
+  color: var(--text-bright) !important;
+  border: 1px solid var(--neon-blue) !important;
+  border-radius: 5px;
+  padding: 0.6rem;
+  font-size: 1rem;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+  transition: 0.3s;
+}
+
+.form-control::placeholder {
+  color: rgba(0, 255, 255, 0.6);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--neon-pink) !important;
+  box-shadow: 0 0 15px var(--neon-pink), 0 0 25px var(--neon-blue);
+  background: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Invalid feedback */
+.invalid-feedback {
+  color: var(--neon-pink) !important;
+  text-shadow: 0 0 5px var(--neon-pink);
+  font-size: 0.85rem;
+}
+
+/* Checkbox */
+.form-check-input {
+  accent-color: var(--matrix-green);
+  box-shadow: 0 0 8px var(--matrix-green);
+}
+
+/* Button */
+.btn-primary {
+  background: linear-gradient(45deg, var(--neon-blue), var(--matrix-green));
+  border: none;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--matrix-green);
+  transition: 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px var(--neon-pink), 0 0 40px var(--matrix-green);
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(0, 255, 255, 0.4) 50%,
+    transparent 70%
+  );
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-150%) rotate(45deg); }
+  100% { transform: translateX(150%) rotate(45deg); }
+}
+
+/* 🌌 Cyberpunk Visibility Fix */
+body, label, p, span, h2, h3 {
+  color: #00ffe0 !important; /* neon cyan */
+  text-shadow: 0 0 6px #00fff7, 0 0 12px #00fff7;
+}
+
+/* Inputs, Select, Textarea */
+input, select, textarea {
+  background: #000 !important; 
+  border: 1px solid #00ffe0 !important;
+  color: #00ffe0 !important;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px #00ffe0, inset 0 0 6px #00ffe0;
+}
+
+/* Placeholder text */
+::placeholder {
+  color: #00fff7 !important;
+  opacity: 0.8;
+}
+
+/* Checkboxes & Radio buttons */
+input[type="checkbox"], input[type="radio"] {
+  accent-color: #00ffe0; 
+  transform: scale(1.2);
+}
+
+/* Button styling */
+button {
+  background: linear-gradient(90deg, #0077ff, #00ffee) !important;
+  color: #000 !important;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-shadow: 0 0 4px #00fff7;
+  box-shadow: 0 0 12px #00ffe0;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #00ffee, #0077ff);
+  box-shadow: 0 0 18px #00fff7;
+}

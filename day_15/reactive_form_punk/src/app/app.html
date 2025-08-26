@@ -1,0 +1,146 @@
+<div class="matrix-bg text" style="z-index: 0;"></div>
+<div class="container">
+  <h2 class="text-center mb-4 neon-text">CYBER FORM v2.0</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="needs-validation hacker-form" novalidate>
+    <div class="row g-3">
+
+      <!-- USERNAME -->
+      <div class="col-md-4">
+        <div class="form-group-3d">
+          <label class="form-label">▲ USER IDENTITY</label>
+          <input type="text" class="form-control" formControlName="username" placeholder="ENTER ACCESS CODE"
+                 [ngClass]="{'is-invalid': form.get('username')?.invalid && form.get('username')?.touched}">
+          <div class="invalid-feedback">
+            <div *ngIf="form.get('username')?.hasError('required')">Username is required</div>
+            <div *ngIf="form.get('username')?.hasError('minlength')">Minimum 3 characters</div>
+            <div *ngIf="form.get('username')?.hasError('usernameTaken')">Username is taken</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EMAIL -->
+      <div class="col-md-4">
+        <div class="form-group-3d">
+          <label class="form-label">✉ CYBER MAIL</label>
+          <input type="email" class="form-control" formControlName="email" placeholder="user@neon.grid"
+                 [ngClass]="{'is-invalid': form.get('email')?.invalid && form.get('email')?.touched}">
+          <div class="invalid-feedback">
+            <div *ngIf="form.get('email')?.hasError('required')">Email is required</div>
+            <div *ngIf="form.get('email')?.hasError('email')">Invalid email format</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PASSWORD -->
+      <div class="col-md-4">
+        <div class="form-group-3d">
+          <label class="form-label">🔒 ENCRYPTION KEY</label>
+          <input type="password" class="form-control" formControlName="password" placeholder="••••••••"
+                 [ngClass]="{'is-invalid': form.get('password')?.invalid && form.get('password')?.touched}">
+          <div class="invalid-feedback">
+            <div *ngIf="form.get('password')?.hasError('required')">Password is required</div>
+            <div *ngIf="form.get('password')?.hasError('pattern')">
+              Must contain uppercase, lowercase, number, and special character
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AGE -->
+      <div class="col-md-4">
+        <div class="form-group-3d">
+          <label class="form-label">⏳ BIO YEARS</label>
+          <input type="number" class="form-control" formControlName="age" placeholder="18+"
+                 [ngClass]="{'is-invalid': form.get('age')?.invalid && form.get('age')?.touched}">
+          <div class="invalid-feedback">
+            <div *ngIf="form.get('age')?.hasError('min')">Minimum age is 18</div>
+            <div *ngIf="form.get('age')?.hasError('max')">Maximum age is 99</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WEBSITE -->
+      <div class="col-md-4">
+        <div class="form-group-3d">
+          <label class="form-label">🌐 DARKNET NODE</label>
+          <input type="url" class="form-control" formControlName="website" placeholder="http://zion.matrix"
+                 [ngClass]="{'is-invalid': form.get('website')?.invalid && form.get('website')?.touched}">
+          <div class="invalid-feedback">Invalid URL format</div>
+        </div>
+      </div>
+
+      <!-- BIRTHDATE -->
+      <div class="col-md-4">
+        <label class="form-label">📅 Birth Date</label>
+        <input type="date" class="form-control" formControlName="birthDate"
+               [ngClass]="{'is-invalid': form.get('birthDate')?.invalid && form.get('birthDate')?.touched}">
+        <div class="invalid-feedback">
+          <div *ngIf="form.get('birthDate')?.hasError('futureDate')">Date cannot be in the future</div>
+        </div>
+      </div>
+
+      <!-- PHONE -->
+      <div class="col-md-4">
+        <label class="form-label">📞 Phone</label>
+        <input type="tel" class="form-control" formControlName="phone"
+               [ngClass]="{'is-invalid': form.get('phone')?.invalid && form.get('phone')?.touched}">
+        <div class="invalid-feedback">Invalid phone number format</div>
+      </div>
+
+      <!-- AGREEMENT -->
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" formControlName="agreeTerms"
+                 [ngClass]="{'is-invalid': form.get('agreeTerms')?.invalid && form.get('agreeTerms')?.touched}">
+          <label class="form-check-label">I agree to the terms and conditions</label>
+          <div class="invalid-feedback">You must agree to the terms</div>
+        </div>
+      </div>
+
+      <!-- SUBSCRIPTION -->
+      <div class="col-md-4">
+        <label class="form-label">💾 Subscription Type</label>
+        <select class="form-select" formControlName="subscriptionType"
+                [ngClass]="{'is-invalid': form.get('subscriptionType')?.invalid && form.get('subscriptionType')?.touched}">
+          <option value="">Choose...</option>
+          <option>Basic</option>
+          <option>Premium</option>
+          <option>Pro</option>
+        </select>
+        <div class="invalid-feedback">Please select a subscription type</div>
+      </div>
+
+      <!-- ADDRESS -->
+      <div class="col-12" formGroupName="address">
+        <h4 class="mb-3 neon-text">🏠 Address</h4>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Street</label>
+            <input type="text" class="form-control" formControlName="street"
+                   [ngClass]="{'is-invalid': form.get('address.street')?.invalid && form.get('address.street')?.touched}">
+            <div class="invalid-feedback">Street is required</div>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">City</label>
+            <input type="text" class="form-control" formControlName="city">
+            <div class="invalid-feedback">City is required</div>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Zip</label>
+            <input type="text" class="form-control" formControlName="zip">
+            <div class="invalid-feedback">5-digit ZIP code required</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUBMIT -->
+      <div class="col-12 text-center mt-4">
+        <button class="btn btn-primary neon-btn" type="submit" [disabled]="form.invalid">
+          ⚡ INITIALIZE SYSTEM ⚡
+        </button>
+      </div>
+
+    </div>
+  </form>
+</div>
