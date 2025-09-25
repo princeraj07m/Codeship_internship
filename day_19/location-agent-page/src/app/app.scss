@@ -1,0 +1,263 @@
+.breadcrumb-item a {
+    text-decoration: none;
+    color: #6c757d;
+    font-weight: 500;
+    font-size: 14px;
+    font-style:normal;
+}
+.p-breadcrumb{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card {
+    border: none;
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.05);
+}
+
+.list-unstyled i {
+    width: 20px;
+    text-align: center;
+}
+
+.review img {
+    width: 50px;
+    height: 50px;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+}
+
+.pagination .page-link {
+    color: #343a40;
+    border: none;
+    background-color: #f8f9fa;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.pagination .page-item.disabled .page-link {
+    background-color: #f8f9fa;
+}
+
+.add-review .form-control {
+    background-color: #f8f9fa;
+    border: none;
+}
+
+
+
+
+// hero banner
+
+
+:host {
+  display: block;
+}
+
+$banner-height: 300px;
+$banner-radius: 14px;
+$avatar-size: 120px;
+$avatar-radius: 12px;
+
+.profile-banner {
+    padding-top: 5%;
+  height: $banner-height;
+  border-radius: $banner-radius;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(360deg,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0) 76%);
+    pointer-events: none;
+    border-radius: inherit;
+  }
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  border-radius: 16px;
+  width: 75vw;
+}
+
+.avatar {
+  width: $avatar-size;
+  height: $avatar-size;
+  border-radius: $avatar-radius;
+  object-fit: cover;
+  border: 3.5px solid #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+}
+
+.details {
+  color: #fff;
+  line-height: 1;
+  flex-grow: 1;
+  width: 100%;
+
+  hr {
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.4);
+    margin: 12px 0;
+  }
+
+  .id {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+  }
+
+  .location {
+    margin: 4px 0 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+  }
+
+  .last-seen {
+    margin: 4px 0 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 13.5px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.banner-actions {}
+
+.action-btn {
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #fff;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+@media (max-width: 576px) {
+  .profile-banner {
+    padding-left: 16px;
+    align-items: flex-end;
+    padding-bottom: 16px;
+  }
+
+  .profile-card {
+    width: calc(100% - 32px);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .details {
+    width: 100%;
+  }
+
+  .details .id {
+    font-size: 20px;
+  }
+
+  $small-avatar: 80px;
+
+  .avatar {
+    width: $small-avatar;
+    height: $small-avatar;
+  }
+}
+.countBox{
+    margin: 0px 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.main-container {
+  background-color: #EEEEEE;
+}
+
+.breadcrumb-section {
+  height: 75px;
+}
+
+.map-iframe {
+  border: 0;
+}
+
+.review-rating-box {
+  background-color: #EEEEEE;
+}
+
+.review-card {
+  background-color: #F5F5F5;
+}
+
+.form-input-container {
+  background-color: #f8f9fa;
+}
+
+.form-input-icon {
+  background-color: #f8f9fa;
+}
+
+.touch-form input ,textarea {
+  background-color: #F5F5F5;
+  border: none;
+}
+
+.quote {
+  position: relative;
+  padding-left: 20px;
+  border-left: 4px solid black;
+  margin-bottom: 1rem;
+}
+
+.quote p {
+  padding-right: 60px;
+}
+
+.quote-icon {
+  position: absolute;
+  right: 15px;
+  bottom: -40px;
+  font-size: 8rem;
+  color: #e0e0e0;
+  line-height: 1;
+  font-style: normal;
+  font-weight: 900;
+  font-family: sans-serif;
+}
+
+.menu-btn {
+  background-color: transparent;
+  border: none;
+}
+
+

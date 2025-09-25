@@ -1,0 +1,156 @@
+:root {
+  --primary-color: #0d7a7a;
+  --secondary-color: #f5f5f5;
+  --text-color: #333;
+  --white: #fff;
+  --gray: #888;
+}
+
+.invoice-container {
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: var(--white);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.invoice-header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 40px;
+  position: relative;
+}
+
+.invoice-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: var(--white);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.logo {
+  max-width: 150px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-info {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-item {
+  text-align: center;
+  color: var(--text-color);
+}
+
+.contact-item i {
+  font-size: 20px;
+  color: #f39c12;
+  margin-bottom: 5px;
+}
+
+.contact-item strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.contact-item p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.invoice-details {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 20px 40px;
+}
+
+.invoice-details h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.invoice-details h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.invoice-details strong {
+  font-weight: 600;
+}
+
+.invoice-details p {
+  margin-bottom: 2px;
+  font-size: 14px;
+}
+
+.invoice-items {
+  padding: 40px;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background-color: transparent;
+  border: none;
+  color: var(--gray);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+.table tbody td {
+  padding: 15px 0;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.invoice-totals {
+  padding: 0 40px 40px;
+}
+
+.invoice-totals > .row > div > div {
+  padding: 10px 0;
+}
+
+.grand-total {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.invoice-footer {
+  padding: 40px;
+  background-color: var(--secondary-color);
+}
+
+.invoice-footer h5 {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.signature {
+  max-width: 120px;
+}
+
+.logo-small {
+  max-width: 80px;
+  margin-top: 20px;
+}

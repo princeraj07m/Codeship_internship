@@ -1,0 +1,130 @@
+<div class="invoice-container">
+  <header class="invoice-header">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="assets/logo.jpg" alt="XARK Logo" class="logo">
+      </div>
+      <div class="col-md-6">
+        <div class="contact-info">
+          <div class="row">
+            <div class="col-4">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <strong>Mail Us</strong>
+                <p>{{ mailUs }}</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <strong>Call Us</strong>
+                <p>{{ callUs }}</p>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <strong>Visit Us</strong>
+                <p>{{ visitUs }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="invoice-details">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>Invoice</h2>
+      </div>
+      <div class="col-md-6 text-end">
+        <h3>Order # {{ orderNumber }}</h3>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-3">
+        <strong>Billed To:</strong>
+        <p>{{ billedTo.name }}</p>
+        <p>{{ billedTo.addressLine1 }}</p>
+        <p>{{ billedTo.addressLine2 }}</p>
+        <p>{{ billedTo.cityStateZip }}</p>
+      </div>
+      <div class="col-md-3">
+        <strong>Shipped To:</strong>
+        <p>{{ shippedTo.name }}</p>
+        <p>{{ shippedTo.addressLine1 }}</p>
+        <p>{{ shippedTo.addressLine2 }}</p>
+        <p>{{ shippedTo.cityStateZip }}</p>
+      </div>
+      <div class="col-md-3">
+        <strong>Payment Method:</strong>
+        <p>{{ paymentMethod.card }}</p>
+        <p>{{ paymentMethod.bank }}</p>
+      </div>
+      <div class="col-md-3">
+        <strong>Order Date:</strong>
+        <p>{{ orderDate }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="invoice-items">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Description</th>
+          <th class="text-end">Price</th>
+          <th class="text-end">Qty</th>
+          <th class="text-end">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items">
+          <td>{{ item.name }}</td>
+          <td>{{ item.description }}</td>
+          <td class="text-end">{{ item.price }}</td>
+          <td class="text-end">{{ item.qty }}</td>
+          <td class="text-end">{{ item.price * item.qty }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="invoice-totals">
+    <div class="row justify-content-end">
+      <div class="col-md-4">
+        <div class="d-flex justify-content-between">
+          <span>SubTotal</span>
+          <span>{{ subTotal }}</span>
+        </div>
+        <div class="d-flex justify-content-between">
+          <span>Tax ({{ taxRate }}%)</span>
+          <span>+{{ tax }}</span>
+        </div>
+        <div class="d-flex justify-content-between grand-total">
+          <strong>Grand Total</strong>
+          <strong>{{ grandTotal }}</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="invoice-footer">
+    <div class="row">
+      <div class="col-md-8">
+        <h5>Thank you for your business.</h5>
+        <strong>Terms & Condition</strong>
+        <p>Invoice was created on a computer and is valid without the signature and seal.</p>
+      </div>
+      <div class="col-md-4 text-end">
+        <img src="assets/signature.png" alt="Signature" class="signature">
+        <p>John Doe</p>
+        <p>CEO</p>
+        <img src="assets/logo.jpg" alt="XARK Logo" class="logo-small">
+      </div>
+    </div>
+  </footer>
+</div>

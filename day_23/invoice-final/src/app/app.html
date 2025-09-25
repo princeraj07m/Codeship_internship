@@ -1,0 +1,128 @@
+<div class="invoice-container">
+  <div class="header-container bg_black">
+    <div class="header-left">
+      <img src="assets/logo.jpg" alt="XARK Logo" class="logo">
+    </div>
+    <div class="header-right">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="icon-container">
+            <i class="fas fa-envelope icon"></i>
+          </div>
+          <strong>Mail Us</strong>
+          <p>{{ mailUs }}</p>
+        </div>
+        <div class="contact-item">
+          <div class="icon-container">
+            <i class="fas fa-phone-alt icon"></i>
+          </div>
+          <strong>Call Us</strong>
+          <p>{{ callUs }}</p>
+        </div>
+        <div class="contact-item">
+          <div class="icon-container">
+            <i class="fas fa-map-marker-alt icon"></i>
+          </div>
+          <strong>Visit Us</strong>
+          <p>{{ visitUs }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="invoice-body">
+    <div class="invoice-title-container">
+      <h2 class="invoice-title">Invoice</h2>
+      <h3 class="order-number">Order # {{ orderNumber }}</h3>
+    </div>
+
+    <div class="details-grid">
+      <div class="detail-cell">
+        <h6>Billed To:</h6>
+        <div class="underline"></div>
+        <p>{{ billedTo.name }}</p>
+        <p>{{ billedTo.addressLine1 }}</p>
+        <p>{{ billedTo.addressLine2 }}</p>
+        <p>{{ billedTo.cityStateZip }}</p>
+      </div>
+      <div class="detail-cell">
+        <h6>Shipped To:</h6>
+        <div class="underline"></div>
+        <p>{{ shippedTo.name }}</p>
+        <p>{{ shippedTo.addressLine1 }}</p>
+        <p>{{ shippedTo.addressLine2 }}</p>
+        <p>{{ shippedTo.cityStateZip }}</p>
+      </div>
+      <div class="detail-cell">
+        <h6>Payment Method:</h6>
+        <div class="underline"></div>
+        <p>{{ paymentMethod.card }}</p>
+        <p>{{ paymentMethod.bank }}</p>
+      </div>
+      <div class="detail-cell">
+        <h6>Order Date:</h6>
+        <div class="underline"></div>
+        <p>{{ orderDate }}</p>
+      </div>
+    </div>
+
+    <table class="items-table">
+      <thead>
+        <tr>
+          <th class="item-header">Item</th>
+          <th class="desc-header">Description</th>
+          <th class="price-header">Price</th>
+          <th class="qty-header">Qty</th>
+          <th class="total-header">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items; let i = index">
+          <td><span class="item-index">{{ i + 1 }}.</span> {{ item.name }}</td>
+          <td>{{ item.description }}</td>
+          <td class="text-right">{{ item.price | currency }}</td>
+          <td class="text-center">{{ item.qty }}</td>
+          <td class="text-right">{{ (item.price * item.qty) | currency }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="summary-container">
+      <div class="totals">
+        <div class="total-row">
+          <span>SubTotal</span>
+          <span>{{ subTotal | currency }}</span>
+        </div>
+        <div class="total-row">
+          <span>Tax ({{ taxRate }}%)</span>
+          <span>+{{ tax | currency }}</span>
+        </div>
+        <div class="total-row grand-total">
+          <span>Grand Total</span>
+          <span>{{ grandTotal | currency }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="signature-container">
+      <img src="assets/sign.png" alt="Signature" class="signature-img">
+      <p class="signature-name">John Doe</p>
+      <p class="signature-title">CEO</p>
+    </div>
+  </div>
+
+  <div class="footer-line"></div>
+
+  <footer class="invoice-footer">
+    <div class="footer-content">
+      <div class="thank-you-section">
+        <h4>Thank you for your business.</h4>
+        <p><b>Terms & Condition</b></p>
+        <p class="terms-text">Invoice was created on a computer and is valid without the signature and seal.</p>
+      </div>
+      <div class="footer-logo">
+        <img src="assets/logo.jpg" alt="XARK Logo">
+      </div>
+    </div>
+  </footer>
+</div>

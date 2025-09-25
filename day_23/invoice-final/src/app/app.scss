@@ -1,0 +1,269 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light-gray);
+}
+
+.invoice-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: var(--white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--teal);
+  color: var(--white);
+  padding: 30px 50px;
+  position: relative;
+}
+
+.header-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 55%;
+  background-color: var(--white);
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+  z-index: 0;
+}
+
+.header-left {
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  width: 120px;
+}
+
+.header-right {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-info {
+  display: flex;
+  gap: 40px;
+  color: var(--dark-gray);
+}
+
+.contact-item {
+  text-align: center;
+}
+
+.icon-container {
+  background-color: var(--orange);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px;
+}
+
+.icon {
+  color: var(--white);
+  font-size: 18px;
+}
+
+.contact-item strong {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.contact-item p {
+  margin: 5px 0 0;
+  font-size: 12px;
+}
+
+.invoice-body {
+  padding: 40px 50px;
+  background-color: var(--teal);
+}
+
+.invoice-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.invoice-title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.order-number {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.detail-cell {
+  padding: 20px;
+  color: var(--white);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.detail-cell:last-child {
+  border-right: none;
+}
+
+.detail-cell h6 {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 30px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 15px;
+}
+
+.detail-cell p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: -1px;
+  background: white;
+}
+
+.items-table th,
+.items-table td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.items-table thead {
+  background-color: var(--teal);
+  color: var(--white);
+}
+
+.items-table th {
+  font-weight: 500;
+}
+
+.item-header {
+  width: 25%;
+}
+.desc-header {
+  width: 35%;
+}
+.price-header,
+.qty-header,
+.total-header {
+  text-align: right;
+}
+
+.item-index {
+  margin-right: 10px;
+}
+
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+
+.summary-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0;
+  background: white;
+}
+
+.totals {
+  width: 300px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.total-row.grand-total {
+  background-color: var(--teal);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.signature-container {
+  text-align: right;
+  padding: 30px 20px;
+  background: white;
+}
+
+.signature-img {
+  height: 50px;
+}
+
+.signature-name {
+  font-weight: 600;
+  margin: 10px 0 0;
+}
+
+.signature-title {
+  font-size: 14px;
+  color: var(--gray);
+  margin: 0;
+}
+
+.footer-line {
+  height: 2px;
+  background-color: var(--light-gray);
+}
+
+.invoice-footer {
+  padding: 30px 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.thank-you-section h4 {
+  color: var(--teal);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.thank-you-section p {
+  margin: 5px 0 0;
+  font-size: 13px;
+}
+
+.terms-text {
+  color: var(--gray);
+}
+
+.footer-logo img {
+  width: 100px;
+}
